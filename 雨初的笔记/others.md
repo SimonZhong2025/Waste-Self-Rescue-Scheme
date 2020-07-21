@@ -1,4 +1,4 @@
-![](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/20200706175612.png)
+![无法加载请爬梯子](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/20200706175612.png)
 
 + 将vs里面的唤醒代码提示快捷键设置成了 `ALT + /`
 
@@ -12,4 +12,8 @@
 
 + 打开内存监控窗口
 
-  ![](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/20200721115806.png)
+  ![无法加载请爬梯子](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/20200721115806.png)
+
++ 若要打开“自动变量”窗口，请在调试时依次选择“调试” > “窗口” > “自动变量”，或按 Ctrl+Alt+V > A 调试 
+
+  若要打开“局部变量”窗口，请在调试时选择“调试” > “窗口” > “局部变量”，或按 Alt+4 。

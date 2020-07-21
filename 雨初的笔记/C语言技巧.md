@@ -1,6 +1,6 @@
 + `fseek(fp, 0, SEEK_END)` 然后 `ftell(fp)` 可以得出这个文件的大小
 
-  ![](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/20200706102237.png)
+  ![无法加载请爬梯子](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/20200706102237.png)
 
   > 如果流以二进制模式（b）打开，则ftell获得的值是距文件起始的字节数
   >
@@ -10,13 +10,13 @@
 
 + 先是转换为一个 `PWORD` （指向WORD的指针），然后再取其内容。这样做是为了取得这个指针指向的内容的头两个字节，用来判断是否为有效的MZ头。（ `pileBuffer` 是一个 `LPVOID` ）
 
-  ![](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/20200706102948.png)
+  ![无法加载请爬梯子](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/20200706102948.png)
 
   > 这里要 `*((PWORD)pFileBuffer)` 的原因是取值运算符 `*` 和强制类型转换运算符 `(type)` 的运算符优先级是同级的，结合方向从右到左，所以要多加上一个括号
 
 + 用指针的时候要养成 **先转型** 的好习惯，因为有时候如果忘了这个指针是什么类型的，但是后面又加上一个数，很可能会无法达到预期的效果。（先转成一个普通的指针，后面加偏移就是往后偏移多少个字节）
 
-  ![](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/20200706155849.png)
+  ![无法加载请爬梯子](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/20200706155849.png)
 
   
 
