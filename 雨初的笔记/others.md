@@ -9,3 +9,7 @@
   
 
 + `CTRL + SHIFT + [` 可以在vscode中折叠代码块
+
++ 打开内存监控窗口
+
+  ![](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/20200721115806.png)
