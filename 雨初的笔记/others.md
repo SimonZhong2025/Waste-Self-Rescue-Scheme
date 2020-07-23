@@ -21,4 +21,7 @@
 + `LOBYTE` 截取4字节的低两位， `HIBYTE` 截取高两位
 
   ![](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/20200723002011.png)
+  
 + 知道自己哪不会你就已经会了 --海哥
+
++ 在 `cmd` 里面输 `python3` 会弹出ms store...要输入py才能进python3环境。
