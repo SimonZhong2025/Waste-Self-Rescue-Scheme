@@ -6,7 +6,7 @@
 
 4. The so-called clear headed refers to the ability to distinguish surface similarities, notice differences, and understand diversity. P55
 
-In such an environment, we can't see with our eyes or smell with our ears. There is no solitude, peace and comfort in the life of urban residents. Even the night is noisy and bright. People in big cities are harassed by the incessant noise, which is violent, restless and disorderly in rhythm, never-ending and insensitive. P58
+5. In such an environment, we can't see with our eyes or smell with our ears. There is no solitude, peace and comfort in the life of urban residents. Even the night is noisy and bright. People in big cities are harassed by the incessant noise, which is violent, restless and disorderly in rhythm, never-ending and insensitive. P58
 
 6. When the environment makes the thought difficult to move, the "unbearable burden of thought" becomes a real burden. Thought is supposed to be like dance, which is not only refreshing but also refreshing and natural. P59
 
