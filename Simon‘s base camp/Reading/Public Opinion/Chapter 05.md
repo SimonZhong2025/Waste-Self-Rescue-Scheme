@@ -1,19 +1,19 @@
-1. 同样的词语在报道者的脑海中唤起的内容并不一定和其在读者的脑海中唤起的内容相一致。P53
+1. What the same words evoke in the reporter's mind is not necessarily consistent with what it evokes in the reader's mind. P53
 
-2. “任何一门语言都是消退了的隐喻的汇集。——让·保罗（Jean Paul) P53
+2. "Any language is a collection of fading metaphors. ——Jean Paul p53
 
-3. 我们的观念在很大程度上是由我们读到的内容所唤起的想法构成的。然鹅世界很大，牵涉到我们自身的种种情况又往往错综复杂，信息则始终处于相对稀缺状态，故我们的观念有很大一部分根本就是基于想象形成的。P54
-	
-4. 所谓头脑清醒，指的就是有能力分辨出表面的相似性、注意到差异性，并对多样性有所理解。P55
-	
-5. 在这样的环境中，我们目不能视、耳不能闻。城市居民的生活中是没有独处、宁静和安逸的，就连夜晚也是既吵又亮的。大城市里的人被无休止的响动所袭扰，这些响动狂暴、躁动、节奏混乱，永不止息而又麻木无情。P58
+3. Our ideas are largely made up of ideas aroused by what we read. However, the goose world is very large, and various situations involving us are often complicated, and information is always in a relatively scarce state. Therefore, a large part of our ideas are formed based on imagination. P54
 
-6. 当环境使思想寸步难行“不可承受的思想重负”就成了一种真正意义上的负担。思想本应像舞蹈一样，既令人心旷神怡，又让人感觉清爽、自然。P59
+4. The so-called clear headed refers to the ability to distinguish surface similarities, notice differences, and understand diversity. P55
 
-7. 舆论之川行至此处，便在人们星星点点的谬见和误解的涡流中呜咽而止，在偏见和牵强的类比思维中黯然失色。P60
+In such an environment, we can't see with our eyes or smell with our ears. There is no solitude, peace and comfort in the life of urban residents. Even the night is noisy and bright. People in big cities are harassed by the incessant noise, which is violent, restless and disorderly in rhythm, never-ending and insensitive. P58
 
-8. 人对食物的共鸣能力呈现为一种多山的地貌，又孤耸的山峰，有辽阔但彼此隔离的高原，除此之外那些低海拔的绵延地带便是大众的、人所共有的“区域”。P60
+6. When the environment makes the thought difficult to move, the "unbearable burden of thought" becomes a real burden. Thought is supposed to be like dance, which is not only refreshing but also refreshing and natural. P59
 
-9. 这些刺激信息作用于人的精神世界，而精神决定了公众的规模。P61
+7. The stream of public opinion whimpers in the eddy current of people's little fallacies and misunderstandings, and pales in prejudice and farfetched analogical thinking. P60
 
-10. 总而言之，舆论在其对环境进行观察和反应的过程中遭遇了各种各样的信息偏折，如审查和保密性在信息人头设置的阻碍，无知和社会环境条件加诸信息接收层面的限制，以及注意力的缺乏、语言的贫乏、各种使人分心的干扰、无意识的情绪的积累，还有单调生活的消磨、暴力、枯燥……信息本身已经扑朔迷离，上述限制又成为横亘在我们与环境之间的障碍，这使我们想清晰、公正地把我真想变得无比艰难，使我们常常形成原理是是的假想而非建设性的观点，使我们我发对那些扰人视听的人惊醒充分的核查。P61
+8. People's ability to resonate with food presents a mountainous landscape with isolated peaks and vast but isolated plateaus. In addition, those low-altitude stretches are "areas" shared by the public and people. P60
+
+9. These stimulating messages act on people's spiritual world, which determines the size of the public. P61
+
+10. In a word, in the process of observing and responding to the environment, public opinion encounters various information deflections, such as the obstruction of censorship and confidentiality in the information head setting, the restriction of ignorance and social environmental conditions on the information receiving level, the lack of attention, the lack of language, all kinds of distracting interference, the accumulation of unconscious emotions, and monotonous life It's killing, violence, boredom The information itself has been complicated and confusing, and the above restrictions have become an obstacle between us and the environment, which makes it very difficult for us to clearly and justly make it very difficult for us to form a hypothetical rather than a constructive point of view based on the principle of "yes", so that we can wake up and fully verify those who disturb people. P61
