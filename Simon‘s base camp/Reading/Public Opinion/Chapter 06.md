@@ -1,33 +1,33 @@
-1. 我们每个人对生活、工作在世界的一隅，活动范围限于小圈子之中，密切交往的人屈指可数。P65
+1. Each of us lives and works in a corner of the world. The scope of our activities is limited to small circles, and there are only a few people who have close contact with each other. P65
 
-2. 陌生的事物在我们的眼中，就是一团移动的、散乱的、无法辨识的虚像。而我们若想通过了解新事物的方式来提升自己的认识水平，即养成一中习惯以令自己对眼前十五又迅速、明晰的洞察，那我们就必须要攻克一道难题：在十五模糊、易变的特征中，去捕捉其连贯、稳定的属性。P66
+2. In our eyes, strange things are a moving, scattered and unidentifiable virtual image. If we want to improve our understanding level by understanding new things, that is, to form a habit to make us have a quick and clear insight into the present 15 years, we must overcome a difficult problem: in the fuzzy and changeable characteristics of the tenth five year plan, we must capture its coherent and stable attributes. P66
 
-3. 在多数情况下，我们并非先理解后定义，而是先定义后理解。P67
+3. In most cases, we do not understand first and then define, but define first and then understand. P67
 
-> 美国终南山
+> ZhongNanshan, USA
 
-4. 引自伦森先生的表述中，用“政治”“商业”“社会”替换“艺术”一词一样说得通
+4. Quoting from Mr. rensen's statement, it makes sense to replace "art" with "politics", "commerce" and "society"
 
-> “……除非艺术学校的教育同时教会我们如何运用自己的双眼观察事物，非则我们会很容易陷入一种习惯性的束缚，模式化地套用我们所熟悉的艺术表现方式去观察眼前的一切事物。这就是我们关于艺术真实性的标准。在观看某人的作品时，若其呈现的色彩和形状未能立即迎合我们有关色彩运用与表现形式的那些既匮乏又陈腐的经验，我们就会摇着头认为它没能再现我们自认为熟的事物，或者指责其矫揉造作。”P69
+>  “…… Unless the education in art schools also teaches us how to use our own eyes to observe things, otherwise we will easily fall into a kind of habitual bondage and apply the familiar artistic expression mode to observe everything in front of us. This is our criterion for the authenticity of art. When we look at someone's work, if the color and shape it presents does not immediately meet our scarce and stale experience in the use and expression of color, we will shake our head and think that it fails to reproduce what we think we are familiar with, or accuse it of affectation. " P69
 
-5. 贝伦森：“人们必然会按照这样的标准去看待现实，只接受以这种方式描绘的形象，并只为这种‘现实’中所展现的理想而欢欣鼓舞。”P70
+5. Berenson: "it is inevitable that people will look at reality according to such standards, only accept the image depicted in this way, and only be excited by the ideal shown in the" reality. " P70
 
-6. 一位温良的淑女曾坦言，刻板印象是如此高傲、自负、如此影响显著，以至于事实和她的刻板印象不符时，她连人类的手足亲情和上帝都不信了。P70
+6. A gentle lady once confessed that stereotypes are so arrogant, conceited, and influential that when the facts do not match her stereotype, she does not even believe in human brotherhood and God. P70
 
-7. 如果未经训练，我们在观察中会倾向于选择性地识别我们熟悉的符号，这些符号代表着一些观念，我们会用脑海中储存的图景将这些观念补全。P72
+7. Without training, we tend to selectively identify familiar symbols in our observation. These symbols represent some concepts, which we will complete with the images stored in our minds. P72
 
-8. 刻板印象的产生和再现是我们的认知过程中最难以捉摸，也最为普遍的影响因素。 除非教育赋予我们敏锐的观察力，否则这些预设的信息就会深刻地影响我们的认知过程。。P73
+8. The generation and reappearance of stereotypes are the most elusive and common influencing factors in our cognitive process. Unless education gives us keen observation, these presupposed information will profoundly affect our cognitive process.. P73
 
-9. 由于我们时常迫切需要在认知过程中节省精力，于是便很难在认知的过程中全然抛却刻板印象。离开了刻板印象，我们的生活将寸步难行。P73
+9. Because we often need to save energy in the cognitive process, it is difficult to completely discard stereotypes in the cognitive process. Without stereotypes, our lives will be difficult to move forward. P73
 
-10. 最重要的时了解刻板印象的特质，并且时刻牢记我们在动用自己的刻板印象时时极易受到误导的。P73
+10. The most important thing is to understand the nature of stereotypes and always remember that we are easily misled when using our stereotypes. P73
 
-11. 那么当刻板印象开始发挥作用时，我们就会意识到其只不过是刻板印象而已，不但不值得我们顶礼膜拜，而且在其出错时我们亦会欣然对其做出修正。P74
+11. When stereotypes come into play, we will realize that they are just stereotypes. They are not worthy of our worship, and we will readily correct them when they go wrong. P74
 
-12. 刻板印象、模式和规则对于搭建精神世界而言起着决定性作用，而我们与生俱来的思想特征与这个精神世界之间实际上是一种逐步调适和回应的关系。P76
+10. Stereotypes, patterns and rules play a decisive role in the construction of the spiritual world, and the relationship between our innate ideological characteristics and the spiritual world is actually a gradual adjustment and response relationship. P76
 
-> 民族魂，群体心理
+> National soul, group psychology
 
-13. 我们或许可以谨慎地尝试概况那些......难以完成的。P76
+13. We may be careful to try to profile what is... Difficult to accomplish. P76
 
-> 思考大数据和小数据的辩证关系。
+> Think about the dialectical relationship between big data and small data.
