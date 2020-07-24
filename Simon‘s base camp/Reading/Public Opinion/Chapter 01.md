@@ -1,38 +1,37 @@
-1. 我们很难对加诸自己头脑并影响自己行为的那些信念进行反思，却又总是自以为是地嘲笑其他民族或其它时代的人所迷信的世界图景是多么荒诞不经。P6
+1. It is difficult for us to reflect on the beliefs that have been imposed on our minds and affect our actions, but we always laugh at the absurdity of the world picture that other nations or people of other times believe in. P6
 
-2. 战争与政治角力中任何一方都会为对手“画像”，他们将这幅臆想出来的图像视为事实本身，却不知其只是他们心中那给“应然”的事实，而非“实然”的事实——只有牢记这一点，我们才能真正理解战争与政治的残酷性。P8
+2. In the war and political struggle, any party will "portrait" the opponent. They regard the imaginary image as the fact itself, but they do not know that it is only the "ought to be" fact in their mind, not the "actual" fact. Only by keeping this in mind, can we truly understand the cruelty of war and politics. P8
 
-3. 有时，人们也会在自以为揭露了某种内情的时候，去主动建构自己的形象。P9
+3. Sometimes, people will take the initiative to construct their own image when they think they have disclosed some internal information. P9
 
-4. 人们所了解的永远只是事实的冰山一角。P9
+4. What people know is only the tip of the iceberg of facts. P9
 
-5. 在社会安定的情况下，舆论的象征符号往往被检视、比较并引起争议。它来去匆匆，汇成一流之后又被人遗忘，从不会对整个群体的群干进行完全的操控。P11
+5. Under the condition of social stability, the symbols of public opinion are often examined, compared and disputed. It comes and goes in a hurry, and then it is forgotten. It never completely controls the whole group of cadres. P11
 
-6. 舆论的象征以为常常就是利益平衡的标志。P11
+6. The symbol of public opinion is often the symbol of balance of interests. P11
 
-7. 人对于自己没有经历过的事物产生感觉的唯一途径，就是借助自己头脑中为该事物勾勒的影像。P13
+7. The only way for a person to feel something that he has not experienced is to use the image in his mind to sketch the thing. P13
 
-8. 人与其所处的环境之间存在的那个拟态环境。P14
+8. The pseudo environment between man and his environment. P14
 
-9. 虚构不等于谎言。虚构指的是对于环境的每种再现，其在某种程度上是由人类自己创造出来的。P14
+9. Fiction is not a lie. To a certain extent, it refers to the creation of the environment by human beings. P14
 
-10. 真是的环境在总体上过于庞大、复杂，且总是转瞬即逝，令人难以对其深刻理解，我们实在没有能力对如此微妙、如此多元、拥有如此丰富可能性的外部世界应付自如。尽管我们必须在真实环境中行动，但为了能够对其加以把握，就必须依照某个更加简单的模型对真实环境进行重建。P15
+10. The real environment is too large and complex in general, and it is always fleeting. It is difficult to understand it deeply. We really do not have the ability to cope with such a subtle, diverse and abundant external world. Although we must act in the real environment, in order to grasp it, we must reconstruct the real environment according to a simpler model. P15
 
-11. 对舆论的分析就必须从厘清下述三者之间的关系开始：行动的环境、人们头脑中关于那个环境的图景，以及人对于从环境中滋生出来的那幅图景做出的反应。P15
+11. The analysis of public opinion must start with clarifying the relationship among the following three aspects: the environment of action, the picture of the environment in people's mind, and the response of people to the picture bred from the environment. P15
 
-12. 不过，暂且不要忙着分析人与生俱来的错综复杂的差异性。眼下的当务之急，是充分意识到每个人对于其所处世界的认识都是差异显著的。P21
+12. But for the time being, don't be too busy analyzing the intricate differences that people are born with. The urgent task now is to fully realize that everyone's perception of the world they live in is quite different. P21
 
-13. 作为一中拥有理性的动物，在尚未确定行为环境具有值得衡量的相似性的前提下，就先去总结行为的相似性，此类做法实在过于浅薄。P21
+13. As a rational animal, it is too shallow to sum up the similarity of behavior before determining the similarity of behavior environment. P21
 
-14. 我们事实上并不知道人对于宏大社会的事实信息会做出何种反应，我们所知道的仅仅是人对于宏大社会中的某个机器不完整的片段图景做出何种反应。P21
+14. In fact, we don't know what kind of response people will make to the factual information of the grand society. What we know is only how people respond to the incomplete fragment of a machine in the grand society. P21
 
-15. 人常常进行推理，这一事实本身就证明拟态环境——现实世界在他们头脑中的再现——是其思想、感情、行动的决定因素。P22
+15. The fact that people often reason proves that the pseudo environment, the representation of the real world in their minds, is the determinant of their thoughts, feelings and actions. P22
 
-16. 如果说，精神分析学着和社会分析学者的研究所围绕的中心都是X，那么精神分析学着研究的就是所谓“环境”对X的影响，二社会分析学者研究的是X本身——拟态环境。P23
+16. If both psychoanalysts and social analysts focus on X, then what psychoanalysts study is the influence of the so-called "environment" on X, and the second social analyst studies x itself, the pseudo environment. P23
 
-17. 社会学家不应以本就属于舆论意见的观点作为评价舆论研究事业的标尺。P24
+17. Sociologists should not take the viewpoint which belongs to the opinion of public opinion as the yardstick to evaluate the cause of public opinion research. P24
 
-18. 在一些事情上，我们的行为与他人的行为相互勾连，即我们的行为会对他人的行为产生影响，他人的行为也对我们的下载意义重大。“他人”头脑中关于自我，关于其他人以及关于自身需求、目标和社会关系的认知图景，就构成了他们个人的意见；而这些图景一旦成为社会中某个群体的行动直接，或以社会群体的名义由一些个体去付诸实践，那么就成了更宏大意义上的舆论。P24
+18. In some things, our behavior is linked with the behavior of others, that is, our behavior will have an impact on others' behavior, and the behavior of others is also significant for our download. The cognitive picture of "others" about themselves, other people and their own needs, goals and social relations constitute their personal opinions; once these images become the actions of a certain group in the society, or put into practice by some individuals in the name of social groups, they will become public opinions in a larger sense. P24
 
-19. 报纸被民主主义者当成了弥补民主制度的灵丹妙药，然而新闻的特性及对新闻业经济基础的分析表明报纸不可避免反映并强化着舆论机器的缺陷。P26
-
+19. Newspapers are regarded by the Democrats as a panacea to make up for the democratic system. However, the characteristics of news and the analysis of the economic basis of journalism show that newspapers inevitably reflect and strengthen the defects of the public opinion machine. P26
