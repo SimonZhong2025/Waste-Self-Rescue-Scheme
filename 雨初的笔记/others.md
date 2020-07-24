@@ -25,3 +25,43 @@
 + 知道自己哪不会你就已经会了 --海哥
 
 + 在 `cmd` 里面输 `python3` 会弹出ms store...要输入py才能进python3环境。
+
++ 可以通过添加这个函数来进行调试信息的输出
+
+  ```cpp
+  #include <stdarg.h>
+  #include <ctype.h>
+  void __cdecl OutputDebugStringF(const char *format, ...)  
+  {  
+      va_list vlArgs;  
+      char    *strBuffer = (char*)GlobalAlloc(GPTR, 4096);  
+  	
+      va_start(vlArgs, format);  
+      _vsnprintf(strBuffer, 4096 - 1, format, vlArgs);  
+      va_end(vlArgs);  
+      strcat(strBuffer, "\n");  
+      OutputDebugStringA(strBuffer);  
+      GlobalFree(strBuffer);  
+      return;  
+  }  
+  ```
+
+  ```cpp
+  // Tools.h: interface for the Tools class.
+  //
+  //////////////////////////////////////////////////////////////////////
+  #if !defined(AFX_TOOLS_H__16F2B0E1_C614_49AE_A5C4_1C58B76F50AC__INCLUDED_)
+  #define AFX_TOOLS_H__16F2B0E1_C614_49AE_A5C4_1C58B76F50AC__INCLUDED_
+  #if _MSC_VER > 1000
+  #pragma once
+  #endif // _MSC_VER > 1000
+  void __cdecl OutputDebugStringF(const char *format, ...); 
+  #ifdef _DEBUG  
+  #define DbgPrintf   OutputDebugStringF  
+  #else  
+  #define DbgPrintf  
+  #endif 
+  #endif // !defined(AFX_TOOLS_H__16F2B0E1_C614_49AE_A5C4_1C58B76F50AC__INCLUDED_)
+  ```
+
+  
