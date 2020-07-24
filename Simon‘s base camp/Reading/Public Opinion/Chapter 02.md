@@ -1,13 +1,13 @@
-1. 当局并没有将将军们所知的全部事实都呈现给普通百姓，而只是告知了部分事实信息，只有这样才最可能稳定人心。P31
+1. The authorities did not present all the facts known by the generals to the ordinary people, but only told some of the facts. Only in this way can the people's hearts be stabilized. P31
 
-2. “像往常一样，新闻界做了加工”。P32
+2. "As usual, the press has processed it.". P32
 
-3. 我们如今把这叫作宣传。宣传家能够阻止人们对事件形成独立的见解，他们对新闻进行操控，以服务于自己的目的。即便这个目的打着爱国的旗号，但操控就是操控。P33
+We call it propaganda now. Propagandists can prevent people from forming independent opinions on events. They manipulate the news to serve their own purposes. Even though the purpose is patriotic, manipulation is manipulation. P33
 
-4. 正在发生的事情被越少人知道，监控人们的行动就越容易完成。P34
+4. The less people know what's going on, the easier it is to monitor people's actions. P34
 
-5. 严格意义上的宣传通常必须借助审查机制来实现。为了进行某种宣传，宣传者必须在公众和事件真相之间设置某种屏障，必须限制人们接近真实环境的机会以免根据自己的判断和希冀去构建脑中的拟态环境。（控制这个人往哪里看、看什么）P34
+5. Strictly speaking, propaganda must be realized by means of censorship mechanism. In order to carry out propaganda, propagandists must set up some kind of barrier between the public and the truth of the event, and must limit people's access to the real environment, so as to avoid constructing the Pseudo Environment in the brain according to their own judgment and expectation. (control where and what the person looks at) P34
 
-6. 无论保密的理由是否站得住脚，屏障都现实存在。在所谓的公共事务领域，保密机制无处不在。P35
+6. No matter whether the reason for confidentiality is tenable or not, barriers exist. In the so-called field of public affairs, confidentiality mechanisms are everywhere. P35
 
-7. 当你形成一个观点时，也许你对事件的真实情况谈不上了解。而这一警示本身就能帮助我们避免一些认知上的谬误。P36
+7. When you form an opinion, maybe you don't know the real situation of the event. And this warning itself can help us avoid some cognitive fallacies. P36
