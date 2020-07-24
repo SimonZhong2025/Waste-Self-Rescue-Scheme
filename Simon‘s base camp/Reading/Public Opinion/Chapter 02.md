@@ -2,7 +2,7 @@
 
 2. "As usual, the press has processed it.". P32
 
-We call it propaganda now. Propagandists can prevent people from forming independent opinions on events. They manipulate the news to serve their own purposes. Even though the purpose is patriotic, manipulation is manipulation. P33
+3. We call it propaganda now. Propagandists can prevent people from forming independent opinions on events. They manipulate the news to serve their own purposes. Even though the purpose is patriotic, manipulation is manipulation. P33
 
 4. The less people know what's going on, the easier it is to monitor people's actions. P34
 
