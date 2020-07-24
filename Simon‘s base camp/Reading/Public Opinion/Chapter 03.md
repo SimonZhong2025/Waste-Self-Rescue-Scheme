@@ -1,15 +1,15 @@
-1. 一个人收入的多寡深刻地影响着其交出外部世界的范围。只要有钱，信息交流中几乎任何有形的障碍都可以被克服。P40
+1. The amount of a person's income has a profound impact on the scope of the outside world. As long as there is money, almost any tangible obstacle to information exchange can be overcome. P40
 
-2. 人们并不会面临审查、保密、高成本等信息沟通的障碍或壁垒，而只是受困于生活的了无生趣，以及自己对人类生活的漠不关心和麻木不仁。P40
+2. People will not face obstacles or barriers of information communication such as censorship, confidentiality and high cost, but will be trapped in the boredom of life and their indifference and apathy to human life. P40
 
-3. 但是，经济地位的衡量标准并非收入的多寡。这是因为至少对于第一代人来说，决定其社会地位的并不是收入状况，而是其所从事的工作的性质。P41
+3. However, the measure of economic status is not the amount of income. This is because, for the first generation at least, it is not income that determines their social status, but the nature of the work they do. P41
 
-4. 无论不同社交圈子的门槛是什么，社交圈子一旦形成就不再吃一个基于经济状况区分出的阶层，而是更接近于生物学上的族群。个体对一个圈子的归属感，会更多地与恋爱关系、婚姻关系以及生儿育女的行为相关；更确切地说，这种归属感设计共同的价观念和追求。P41
+4. No matter what the threshold of different social circles is, once social circles are formed, they will no longer eat a class based on economic status, but will be closer to biological groups. The individual's sense of belonging to a circle is more related to the love relationship, marriage relationship and the behavior of having children; more precisely, this sense of belonging designs the common value concept and pursuit. P41
 
-5. 当大多数人在其社交圈子中怡然自得地生活，并极为功利地将其所在的社交圈子视为整个世界时，社交圈子的领袖却必须做到对自己圈子的结构了如指掌，同时又能洞察其在整个社会等级体系中所处的地位。P42
+5. When most people live happily in their social circle and regard their social circle as the whole world, the leaders of social circle must know the structure of their own circle as well as their position in the whole social hierarchy system. P42
 
-6. 上流社会总是被下层社会模仿。P43
+6. The upper class is always imitated by the lower class. P43
 
-7. 我们只需要牢记社交圈子如何强有力地作用于我们和外部世界之间的观念交流、社交圈子如何替我们接受何种信息，以及我们如何判断和评价这些信息就可以了。P44
+7. We just need to keep in mind how powerful the social circle is in the exchange of ideas between us and the outside world, how the social circle receives what information for us, and how we judge and evaluate it. P44
 
-8. 但是，要想进行有效的思考，首先要避免进行判断，这样才能重获一种单纯的视角，摆脱情感因素的影响，令自己充满好奇心并且襟怀坦荡。P45
+8. However, if you want to think effectively, you should first avoid judgment. In this way, you can regain a pure perspective, get rid of the influence of emotional factors, and make yourself full of curiosity and open-minded. P45
