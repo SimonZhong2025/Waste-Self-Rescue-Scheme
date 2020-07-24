@@ -1,10 +1,9 @@
- 1. 我们在本可追求客观、公正的见解时却往往坚持自己的刻板印象，除了为在认识过程中节省精力外，可能还有一个原因，那就是刻板印象或许是我们个人的传统的核心，是对我们的社会地位的一种保护。
- 
- 2. 我们的刻板印象被质疑时候，其实被质疑所撼动，只不过是我们的*世界*而已.
- 
- 3. 刻板印象并不是中立的。其不仅仅是用有序的方式对庞杂、纷乱的现实做出整理，也不只是一种认知的捷径，它还是我们的自尊心的堡垒，是我们对自己价值观、地位和权力的理解在外部世界里的投射。P78
- 
- 4. 这完全就是一种刻板印象，它的特点就是先于理性发挥作用。P79
- 
- 5. 不过，最重要的是，这些传言来自战场上的英雄，这也就以为着必须对其深信不疑，因为不相信就意味着不爱国。P82
- 
+1. We tend to stick to our stereotypes when we can pursue objective and impartial opinions. In addition to saving energy in the process of understanding, there may be another reason: stereotype may be the core of our personal tradition and a protection of our social status.
+
+2. When our stereotype is questioned, it is only our * world * that is shaken by it
+
+3. Stereotypes are not neutral. It is not only an orderly way to sort out the complex and chaotic reality, nor is it just a shortcut to cognition. It is also the bastion of our self-esteem and the projection of our understanding of our values, status and power in the external world. P78
+
+4. This is a kind of stereotype. Its characteristic is that it works before reason. P79
+
+5. But the most important thing is that these rumors come from heroes on the battlefield, which means that we must believe them deeply, because not believing means being unpatriotic. P82
