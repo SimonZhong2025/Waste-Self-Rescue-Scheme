@@ -79,3 +79,13 @@
     ![](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/20200725195815.png) 
 
 + `ALT + 0` 和 `ALT + 2` 可以打开空间和输出视图。
+
++ 要让对话框中的按钮对齐可以调出这个工具栏然后点击相应的按钮，就可以达到左对齐上对齐下对齐的目的。
+
+  ![image-20200725220538272](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200725220538272.png)
+
++ 哎。要努力啊骚年！！！
+
+![image-20200725221013104](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200725221013104.png)
+
+​		![image-20200725221152441](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200725221152441.png)		
