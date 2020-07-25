@@ -71,4 +71,11 @@
   + `F8` 单步
 
   + `CTRL + G` 查看某个位置的反汇编（如 `00401150` ）
+
   + `enter` 跳到函数定义， `-` 跳回来
+
+  + 视图中的 `W` 是 `windows窗口` 。点开之后可以看到当前程序有多少个窗口
+
+    ![](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/20200725195815.png) 
+
++ `ALT + 0` 和 `ALT + 2` 可以打开空间和输出视图。
