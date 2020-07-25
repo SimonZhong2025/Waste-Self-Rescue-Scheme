@@ -76,6 +76,8 @@
 
   + 视图中的 `W` 是 `windows窗口` 。点开之后可以看到当前程序有多少个窗口
 
+  + 视图中的 `C` 是 `CPU窗口` ，点开之后可以回到一打开就看到的那个窗口。
+
     ![](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/20200725195815.png) 
 
 + `ALT + 0` 和 `ALT + 2` 可以打开空间和输出视图。
@@ -84,8 +86,3 @@
 
   ![image-20200725220538272](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200725220538272.png)
 
-+ 哎。要努力啊骚年！！！
-
-![image-20200725221013104](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200725221013104.png)
-
-​		![image-20200725221152441](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200725221152441.png)		
