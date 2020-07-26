@@ -90,7 +90,7 @@ for i in Str: # 从字符串的第一个符号到最后一个符号
 
 如前[对java和python的数据类型的思考](https://github.com/SimonZhong2025/Waste-Self-Rescue-Scheme/blob/master/Simon%E2%80%98s%20base%20camp/Python/MOOC%20python%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/01%20%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%AE%9E%E4%BE%8B%EF%BC%9ATemperConvert.md)，我们可以再结合这个来看看就是我们输入的数字，其实都是**字符串**类型的，而`for i in Str`则只是从字符串的第一个符号到最后一个符号而已。因为我们是要得到某一位的数字，那么就不能把我们的输入转变成整数，否则无法进行字符串的索引。
 
-同时我们对比`for i in range(10)`可以得出共性就是for的作用机制
+同时我们对比`for i in range(10)`可以得出共性就是for的作用机制。而且计算机的数，都是从零开始的而不是从1开始的，这个你可记好了。
 
 > 如百度找到的资料
 ```
