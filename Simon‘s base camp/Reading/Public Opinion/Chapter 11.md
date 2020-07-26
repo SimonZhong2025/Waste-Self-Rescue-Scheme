@@ -8,7 +8,7 @@
 
 5. The practical mind is most likely to accept spatial things. P129
 
-6. Thought must be associated with our inner demands in order to work. Unless it releases or hinders, suppresses or enhances a certain desire, it is nothing. P129 ***？？？ * * *
+6. Thought must be associated with our inner demands in order to work. Unless it releases or hinders, suppresses or enhances a certain desire, it is nothing. P129 ***？？？***
 
 7. Without the embellishment of the conflict atmosphere, it is difficult for people who are not directly related to the incident to have sustained interest in it. P131
 
