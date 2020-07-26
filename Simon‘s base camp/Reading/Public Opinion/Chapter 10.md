@@ -20,7 +20,7 @@
 
 11. When we try to find the causal relationship between complex and intangible things and phenomena, the randomness of thinking will bring more danger. P121
 
-We have discussed in detail how things cause egoism. We have learned that our access to information is neither smooth nor sure. Our understanding of things is deeply influenced by stereotypes. Our choice and use of evidence are manipulated by factors such as self defense psychology, prestige, moral principles, inaccurate concept of time and space, and unscientific sampling methods. P122
+12. We have discussed in detail how things cause egoism. We have learned that our access to information is neither smooth nor sure. Our understanding of things is deeply influenced by stereotypes. Our choice and use of evidence are manipulated by factors such as self defense psychology, prestige, moral principles, inaccurate concept of time and space, and unscientific sampling methods. P122
 
 13. If we have a strong sense of evil about something, we can easily associate it with other things we hate or fear, and establish a causal relationship between them. P123
 
