@@ -84,4 +84,4 @@ else:
 Hello World
 ```
 
-> 和Java不同，Java如果运行类似代码，则不需要用eval，思考一些为什么。
+> 和Java不同，Java如果运行类似代码，则不需要用eval，思考一些为什么。详细参考[python中for和字符串的用法解释](https://github.com/SimonZhong2025/Waste-Self-Rescue-Scheme/blob/master/Simon%E2%80%98s%20base%20camp/Python/MOOC%20python%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/01%20Python123%E7%AC%AC%E4%B8%80%E5%8D%95%E5%85%83%E7%BB%83%E4%B9%A0%E9%A2%98.md)。
