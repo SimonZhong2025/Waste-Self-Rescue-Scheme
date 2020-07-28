@@ -131,3 +131,7 @@ t.right(angle)
 ### rangge() 函数
 
 产生循环计数序列，记住这个是函数即可，复习上节课的[字符串和`range()`的结合](https://github.com/SimonZhong2025/Waste-Self-Rescue-Scheme/blob/master/Simon%E2%80%98s%20base%20camp/Python/MOOC%20python%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/01%20Python123%E7%AC%AC%E4%B8%80%E5%8D%95%E5%85%83%E7%BB%83%E4%B9%A0%E9%A2%98.md)
+
+
+##### 学生作品
+![](https://github.com/SimonZhong2025/Waste-Self-Rescue-Scheme/blob/master/Simon%E2%80%98s%20base%20camp/Python/MOOC%20python%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/Ps/turtle%E6%A1%88%E4%BE%8B.jpg)
