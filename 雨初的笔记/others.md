@@ -86,3 +86,6 @@
 
   ![image-20200725220538272](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200725220538272.png)
 
++ autohotkey停止脚本
+
+  ![image-20200802235816841](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200802235816841.png)
