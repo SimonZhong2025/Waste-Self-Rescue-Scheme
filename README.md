@@ -13,3 +13,7 @@
 |:---:|:---:|
 |1|钟志辉|
 |2|钟雨初|
+
+## Stargazers over time
+
+[![Stargazers over time](https://starchart.cc/JimmyLv/jimmylv.github.io.svg)](https://starchart.cc/JimmyLv/jimmylv.github.io)
