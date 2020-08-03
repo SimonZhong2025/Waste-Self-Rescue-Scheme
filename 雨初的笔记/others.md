@@ -89,3 +89,9 @@
 + autohotkey停止脚本
 
   ![image-20200802235816841](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200802235816841.png)
+
++ `UltraEdit` 修改布局
+
+  ![image-20200803111907063](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200803111907063.png)
+
++ 一个 `WCHAR` 大小是2个字节（一个 `WORD` ）![image-20200803123923855](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200803123923855.png)
