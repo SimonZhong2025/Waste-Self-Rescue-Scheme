@@ -95,3 +95,9 @@
   ![image-20200803111907063](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200803111907063.png)
 
 + 一个 `WCHAR` 大小是2个字节（一个 `WORD` ）![image-20200803123923855](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200803123923855.png)
+
++ 资源类型
+
+  ![image-20200803185230591](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200803185230591.png)
+
+  ![image-20200803185322604](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200803185322604.png)
