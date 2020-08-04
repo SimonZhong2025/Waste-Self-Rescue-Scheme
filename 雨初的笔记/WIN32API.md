@@ -26,6 +26,14 @@
   SetWindowText(hEditUser, TEXT("哈哈哈")); // 设置窗口文字
   ```
 
-  
++ `WINDEF.H` 中有一个宏 `MAX_PATH` 定义了文件路径最大长度260
 
-  
+  ![image-20200804203749407](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200804203749407.png)
+
++ 在添加了 `.cpp` 文件之后一定要加上 `#include "StdAfx.h"` ，否则会出现 `.sbr` 文件找不到的问题。
+
+  ![image-20200804204455968](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200804204455968.png)
+
++ [慎用USES_CONVERSION 使用和注意](https://blog.csdn.net/thanklife/article/details/70208841) 好像说要慎用 `USES_CONVERSION` ，因为它是在堆栈上分配空间的，不小心很容易栈溢出。最好还是自己写 `W2A A2W` 作用的函数。（这个宏在 `atlconv.h` 头文件里面）
+
+  > `MultiByteToWideChar` 函数好像跟这功能有点关系
