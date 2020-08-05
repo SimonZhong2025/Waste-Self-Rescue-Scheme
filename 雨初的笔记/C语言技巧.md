@@ -21,3 +21,9 @@
   
 
 + 利用 `sprintf` 可以格式化字符串，比如将10进制的数字转换为16进制。另外需要注意的是 `itoa` 并不是一个标准函数，在linux平台下好像就不能使用。尽量不要用这个函数。
+
++ 头文件不要定义任何变量，那是非常业余的行为。 [C语言多文件共用全局变量](https://www.cnblogs.com/invisible2/p/6905892.html) 。可以在头文件中用 `extern` 来声明变量。
+
++ `sprintf` 会自动在字符串后面加上 `\0` ，所以不用太担心。（但是我还是喜欢 `memset` 一下怎么破。。）
+
+  ![image-20200805213801324](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200805213801324.png)
