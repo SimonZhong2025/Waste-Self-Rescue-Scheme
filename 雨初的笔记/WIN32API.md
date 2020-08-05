@@ -37,3 +37,27 @@
 + [慎用USES_CONVERSION 使用和注意](https://blog.csdn.net/thanklife/article/details/70208841) 好像说要慎用 `USES_CONVERSION` ，因为它是在堆栈上分配空间的，不小心很容易栈溢出。最好还是自己写 `W2A A2W` 作用的函数。（这个宏在 `atlconv.h` 头文件里面）
 
   > `MultiByteToWideChar` 函数好像跟这功能有点关系
+
++ 画一个组框可以将各种东西框在里面，更加美观
+
+  ![image-20200805104246014](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200805104246014.png)
+
++ 在使用列表控件的时候，因为这些控件都在一个 `dll` 里面，所以要先把这个 `dll` 导入进来
+
+  ```cpp
+  #include <commctrl.h>				
+  #pragma comment(lib,"comctl32.lib")				
+  ```
+
+  且通用控件（列表控件属于通用控件的一种）在使用之前，需要通过 `INITCOMMONCONTROLSEX` 进行初始化，只要在您的程序中的任意地方引用了该函数就会使得WINDOWS的程序加载器PE  Loader加载该库
+
+  可以将这几行代码加在 `WinMain` 的开头
+
+  ```cpp
+  INITCOMMONCONTROLSEX icex;				
+  icex.dwSize = sizeof(INITCOMMONCONTROLSEX);				
+  icex.dwICC = ICC_WIN95_CLASSES;				
+  InitCommonControlsEx(&icex);				
+  ```
+
+  
