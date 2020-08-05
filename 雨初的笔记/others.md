@@ -103,3 +103,5 @@
   ![image-20200803185322604](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200803185322604.png)
 
 ![image-20200805110013917](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200805110013917.png)
+
++ vc6中 `#define` 后 `do` 可以自动补全 `do while(0)`
