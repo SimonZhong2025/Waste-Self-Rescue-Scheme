@@ -84,4 +84,14 @@
 
   如果需要获取用户在列表中选取了哪一行，可以通过 `SendMessage` ，最后一个参数写为 `LUNI_SELECTED` 得到选择了哪一行。
 
-+ 需要获取某一个窗口的句柄的时候要使用 `GetDlgItem` 来获取。像这样 `GetDlgItem(hwndDlg, ID_ITEMNAME)); ` 。其中 `hwndDlg` 是程序的 `ImageBase` 。
++ 需要获取某一个窗口的句柄的时候要使用 `GetDlgItem` 来获取。像这样 `GetDlgItem(hwndDlg, ID_ITEMNAME))`  。其中 `hwndDlg` 是程序的 `ImageBase` 。
+
++ 在获取用户选择第几行之后再得到这一行里面存储的PID（存储的特定的数据）
+
+  ![image-20200806230327036](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200806230327036.png)
+  
++ 这个宏 `MAKEINTRESOURCE` 也可以将一个数字转换为 `char *` 类型，便于传递参数。
+
+  ![image-20200725202941156](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200725202941156.png)
+
+  ![image-20200725203108905](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200725203108905.png)
