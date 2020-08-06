@@ -65,3 +65,23 @@
 + 消息处理函数最后一定要记得将没有处理的消息 `return FALSE` 放回给系统处理。否则会出现窗口加载不正常的现象。
 
   ![image-20200805222840820](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200805222840820.png)
+
++ 如果要让点这里的时候下面自动展示相应的数据，回调函数中拦截的消息不是 `WM_COMMAND` ，而应该是 `WM_NOTIFY`  。（也叫通知消息）
+
+  ![image-20200806214950748](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200806214950748.png)
+
++ 拦截到 `WM_NOTIFY` 消息的时候其中的 `lParam` 指向一个结构，这个结构根据具体消息的不同可能会有不同。
+
+  ![image-20200806215159768](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200806215159768.png)
+
++ `WM_NOTIFY` 用法
+
+  ![image-20200806220956941](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200806220956941.png)
+
++ `WINDOWS` 编程的本质是消息驱动的，任何东西都是消息
+
+  ![image-20200806225549205](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200806225549205.png)
+
+  如果需要获取用户在列表中选取了哪一行，可以通过 `SendMessage` ，最后一个参数写为 `LUNI_SELECTED` 得到选择了哪一行。
+
++ 需要获取某一个窗口的句柄的时候要使用 `GetDlgItem` 来获取。像这样 `GetDlgItem(hwndDlg, ID_ITEMNAME)); ` 。其中 `hwndDlg` 是程序的 `ImageBase` 。
