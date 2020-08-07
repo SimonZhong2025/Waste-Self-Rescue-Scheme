@@ -106,4 +106,26 @@
 
   难道是我那三个函数里面的逻辑问题？不小心把这个指针指向 `NULL` 了？先放着懒得追究了（懒得理直气壮），记得每次 `GetDlgItem` 就没事了。
 
-+ ![image-20200807195738904](C:\Users\雨初\AppData\Roaming\Typora\typora-user-images\image-20200807195738904.png)
++ ![image-20200807195738904](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200807195738904.png)
+
++ 进程是静止的，就是指一个4GB的空间里面都放了什么。线程是指里面有几个同时执行的程序
+
++ WIN10的任务管理器里面跳到详细信息然后右键可以调出选择列选项
+
+  ![image-20200807221027008](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200807221027008.png)
+
++ 加上 `::` 表示其不属于任何一个类，其是一个全局的函数。最好加上。可以避免和其他一些同名的函数冲突
+
+  ![image-20200807222038945](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200807222038945.png)
+
++ `::CloseHandle` 之后只是说这个句柄我不用了，并不是说线程就挂了。事实上线程还在跑。句柄只是三环和零环的一个接口（？），关掉这个句柄并不会关掉这个线程。
+
+  ![image-20200807222159616](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200807222159616.png)
+
++ 这里千万不能传一个 `&x` 地址进去。因为 `MyTest` 这个函数执行完了之后堆栈就销毁了，传到新线程中的那个指针已经指向垃圾数据了。所以在多线程中谨慎传指针，不然容易出错。（另外如果这里的 `x` 是一个 `static int` 的话也不会出现这种问题。）
+
+  ![image-20200807223201071](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200807223201071.png)
+
++ `sprintf` 和 `sscnaf` 吹爆！！！
+
++ 做图形界面的时候一定要单独起线程。如果只有一个线程，那么干活的时候就没有人来管消息了。如果在干活的地方卡死了，那这个程序就卡死了，消息没有人可以处理了。
