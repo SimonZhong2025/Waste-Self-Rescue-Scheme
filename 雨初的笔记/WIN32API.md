@@ -95,3 +95,15 @@
   ![image-20200725202941156](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200725202941156.png)
 
   ![image-20200725203108905](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200725203108905.png)
+
++ 想要删除所有元素的时候句柄都得实时获取才行，原因不清楚。
+
+  ![image-20200807163121870](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200807163121870.png)
+
+  ![image-20200807163236455](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200807163236455.png)
+
+  ![image-20200807163306486](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200807163306486.png)
+
+  难道是我那三个函数里面的逻辑问题？不小心把这个指针指向 `NULL` 了？先放着懒得追究了（懒得理直气壮），记得每次 `GetDlgItem` 就没事了。
+
++ ![image-20200807195738904](C:\Users\雨初\AppData\Roaming\Typora\typora-user-images\image-20200807195738904.png)
