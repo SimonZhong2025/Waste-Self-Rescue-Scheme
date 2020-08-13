@@ -134,7 +134,8 @@
 
   ![image-20200808002327738](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200808002327738.png)
 
-  + 如果是用 `::ExitThread` 方法退出，就是直接退出了，只是把调用的栈空间释放了。在堆里面的东西不管。比如你在这个线程里面创建了一个对象，如果是 `ExitThread` 方法来退出的话程序并不会自动帮你调用析构函数，该在哪还是在哪。（内存泄露警告！）
+  + 如果是用 `::ExitThread` 方法退出，就是直接退出了， **只是把调用的堆栈空间释放了** 。在堆里面的东西不管。比如你在这个线程里面创建了一个对象，如果是 `ExitThread` 方法来退出的话程序并不会自动帮你调用析构函数，该在哪还是在哪。（内存泄露警告！）
+  + 如果是用 `::TerminateThread` 方法结束线程， **异步** 退出线程， 并且 **不会清理堆栈** 。
   + 线程函数返回就是这个函数执行完了就结束这个线程。这是 **推荐的写法** 。这样你在函数的末尾可以从容地做完收尾工作。（问题：会自动调用析构函数吗，还是要手动调用？）
 
 + `windows` 不是一个实时的操作系统
@@ -142,3 +143,31 @@
 +  `::ExitThread` 是  **同步调用** ，只有操作系统做完关闭线程这个动作程序才会向下一行代码执行。而 `::TerminateThread` 是 **异步调用** 。它只是发一个消息给操作系统告诉他要关闭这个线程，在执行这一行后面的代码的时候这个线程并不一定已经被关闭了。如果 **接下来的代码是必须线程结束了才能执行的代码** ，那么使用 `TerminateThread` 就有可能会出现问题。
 
   如果需要用 `::TerminateThread` 达到同样的效果，那么需要在需要 **阻塞** 的地方加上这样一行代码 `::WaitForSingleObject(hThread,INFINITE);` 。这样只有操作系统关闭了需要关闭的线程之后 `::WaitForSingleObject` 才会放行让程序继续执行下一行代码。 
+
++ **进程就是4GB，线程就是EIP** --老唐
+
++ ```cpp
+  DWORD WINAPI 线程A(PVOID pvParam) 		
+  {
+     while(g_nIndex < MAX_TIMES) 		
+     {
+        EnterCriticalSection(&cs);		
+        //对全局遍历X的操作		
+        LeaveCriticalSection(&cs);		
+     }
+     return(0);	
+  }
+  DWORD WINAPI 线程B(PVOID pvParam) 		
+  {		
+     		
+     while(g_nIndex < MAX_TIMES) 		
+     {		
+        EnterCriticalSection(&cs);		
+        //对全局遍历X的操作		
+        LeaveCriticalSection(&cs);		
+     }
+     return(0);		
+  }
+  ```
+
+  如果代码这样写的话那么要等一个线程的 `while` 循环执行完了之后才会归还令牌，第二个线程才有可能执行。所以这样写代码是不科学的。
