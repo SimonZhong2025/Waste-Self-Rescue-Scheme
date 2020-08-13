@@ -113,3 +113,5 @@
   ![image-20200806220713807](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200806220713807.png)
 
 + `VC6` 好像不支持代码折叠。
+
+
