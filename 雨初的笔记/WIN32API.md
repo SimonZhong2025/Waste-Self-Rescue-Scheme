@@ -218,6 +218,20 @@
   ![image-20200814224233841](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200814224233841.png)
 
 + `CreateEvent` 的第二个参数 `bManualReset` 的意义是：
+
   + 如果设置为 `FALSE` ，那么只要有线程 `Wait` 到这个事件，就会立刻将其状态改变为阻塞。
-  + 如果设置为 `TRUE` ，那么就算有线程 `Wait` 到这个事件，也不会改变其状态。而需要手动（ *Manual* ）通过 `SetEvent` 和 `ResetEvent` 来改变其状态。但是这种用法比较少见，因为容易产生线程安全问题。
+  + 如果设置为 `TRUE` ，那么就算有线程 `Wait` 到这个事件，也不会改变其状态。而需要手动（ *Manual* ）通过 `SetEvent（设置为已通知状态）` 和 `ResetEvent（设置为未通知状态）（这个函数极少用到）` 来改变其状态。但是这种用法比较少见，因为容易产生线程安全问题。
+  + 通常会把这个参数设置为 `FALSE` 。
+
++ `CreateEvent` 第三个参数 `bInitialState` 的意义是创建这个事件的时候将其设置为 **已通知状态（TRUE）** 还是 **未通知状态（FALSE）** 。如果是 **已通知状态** 的话说明其他线程可以直接 `Wait` 到这个对象。反之则需要等这个线程将这个事件设置为已通知状态之后才能 `Wait` 到这个对象。
+
 + 好像阻塞（正在 `Wait` 这个对象）的时候称这个内核对象为未通知状态，而已经 `Wait` 到这个对象之后称这个内核对象为已通知状态。
+
++ 如果一个线程要归还控制权，将一个事件设置为 **已通知状态** ，需要使用 `SetEvent` 函数达到目的。
+
++ 惨案。。![image-20200815002118623](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200815002118623.png)![image-20200814234047255](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200814234047255.png)
+
+  改这一个地方花了我20分钟。
+
++ 事件不仅可以用来做线程的 **互斥** ，还可以用来做线程的 **同步** 。而 **临界区和互斥体** 只能用来做线程的 **互斥** 。
+
