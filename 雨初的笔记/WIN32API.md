@@ -275,7 +275,7 @@
 
   + 倒数第四个参数 `lpEnvironment` ，这个参数用得比较少，也比较简单，需要用的时候查下资料了解一下。
 
-  + 倒数第三个参数 `lpCurrentDirectory` 表示子进程获取的当前目录。如果填为 `NULL` 的话 **子进程中获取的当前目录和父进程的相同** 。（使用 `GetCurrnetDirectory` 可以获取当前目录 ）。而如果填写了一个常量字符串，在子进程中获取当前目录的时候会得到传进去的那个字符串，如图
+  + 倒数第三个参数 `lpCurrentDirectory` 表示子进程获取的当前目录。如果填为 `NULL` 的话 **子进程中获取的当前目录和父进程的相同** 。（使用 `GetCurrentDirectory` 可以获取当前目录 ）。而如果填写了一个常量字符串，在子进程中获取当前目录的时候会得到传进去的那个字符串，如图
 
     ![image-20200816162933840](C:\Users\雨初\AppData\Roaming\Typora\typora-user-images\image-20200816162933840.png)
 
