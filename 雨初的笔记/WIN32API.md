@@ -237,4 +237,64 @@
 
 + 如果之后不需要用到这个线程的 **句柄** 了，那么大可将其 `CloseHandle` 掉。因为就算将其句柄删除，这个线程仍然会跑完。只是我们无法通过句柄来访问它了而已。
 
-+  **程序** 只是一个存储在硬盘中的文件，不过这个文件遵守PE结构。 **镜像** 是 **程序** 拉伸后的结果。但是没有 `EIP` ，不能跑。而线程是可以运行的，有 `EIP` 。
+  ## 进程创建 / 加密壳基础
+
++ **程序** 只是一个存储在硬盘中的文件，不过这个文件遵守PE结构。 **镜像** 是 **程序** 拉伸后的结果。但是没有 `EIP` ，不能跑。而线程是可以运行的，有 `EIP` 。
+
++ 三环中能控制内核对象的 **句柄** 只是 **句柄表** 中的一个编号。句柄表中才真正存储了这个内核对象在 **高2G** 中的位置。需要访问这个内核对象的时候要用这个编号在句柄表中找到相应的位置，才能得到该内核对象真正的地址。
+
++ 每个 **进程** 都会有一个句柄表
+
++ `CreateProcess` 各参数
+
+  ```cpp
+  BOOL CreateProcess(
+    LPCTSTR lpApplicationName,                 // name of executable module
+    LPTSTR lpCommandLine,                      // command line string
+    LPSECURITY_ATTRIBUTES lpProcessAttributes, // SD
+    LPSECURITY_ATTRIBUTES lpThreadAttributes,  // SD
+    BOOL bInheritHandles,                      // handle inheritance option
+    DWORD dwCreationFlags,                     // creation flags
+    LPVOID lpEnvironment,                      // new environment block
+    LPCTSTR lpCurrentDirectory,                // current directory name
+    LPSTARTUPINFO lpStartupInfo,               // startup information
+    LPPROCESS_INFORMATION lpProcessInformation // process information);
+  ```
+
+  + 第一个参数 `lpApplicationName` 是一个 **常量字符串** ，指向需要运行的进程这个 `EXE` 所存放的地址。
+
+  + 第二个参数 `lpCommandLine` 是一个 **字符串** ，（ **因为过程中可能要修改这个字符串的值所以不要传常量字符串进去** ），表示这个程序运行时候的命令行参数。
+
+  + 倒数第二个参数 `lpStartupInfo` 表示我们需要这个进程以什么方式打开。应用程序有默认的打开方式，所以不用去改什么东西。这个结构体的结构如下
+
+    ```cpp
+    typedef struct _STARTUPINFO { 
+        DWORD   cb; 
+        LPTSTR  lpReserved; 
+        LPTSTR  lpDesktop; 
+        LPTSTR  lpTitle; 
+        DWORD   dwX; 
+        DWORD   dwY; 
+        DWORD   dwXSize; 
+        DWORD   dwYSize; 
+        DWORD   dwXCountChars; 
+        DWORD   dwYCountChars; 
+        DWORD   dwFillAttribute; 
+        DWORD   dwFlags; 
+        WORD    wShowWindow; 
+        WORD    cbReserved2; 
+        LPBYTE  lpReserved2; 
+        HANDLE  hStdInput; 
+        HANDLE  hStdOutput; 
+        HANDLE  hStdError; 
+    } STARTUPINFO, *LPSTARTUPINFO; 
+    ```
+
+    我们只需要把 `DWORD cb` 的值赋为这个结构体的 **大小** ，然后把所有其他的成员设置为 **0** 即可。如下:
+
+    ```cpp
+    STARTUPINFO si = {0};   
+    si.cb = sizeof(si);
+    ```
+
+    然后在调用函数的时候把 `&si` 作为倒数第二个参数传进去即可。
