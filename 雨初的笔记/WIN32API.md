@@ -271,6 +271,14 @@
 
   + 第五个参数 `bInheritHandles` 表示创建这个子进程的时候 **允不允许这个子进程继承父进程的句柄** 。如果是 `TRUE` 则可以继承父进程的句柄。如果是 `FALSE` 则不能。
 
+  + 倒数第五个参数 `dwCreationFlags` => 如果是图形界面就没所谓，如果是控制台程序， 要填上 `CREATE_NEW_CONSOLE` ，这样才能让新的进程在新的控制台窗口中打开。否则会和父进程公用一个控制台。
+
+  + 倒数第四个参数 `lpEnvironment` ，这个参数用得比较少，也比较简单，需要用的时候查下资料了解一下。
+
+  + 倒数第三个参数 `lpCurrentDirectory` 表示子进程获取的当前目录。如果填为 `NULL` 的话 **子进程中获取的当前目录和父进程的相同** 。（使用 `GetCurrnetDirectory` 可以获取当前目录 ）。而如果填写了一个常量字符串，在子进程中获取当前目录的时候会得到传进去的那个字符串，如图
+
+    ![image-20200816162933840](C:\Users\雨初\AppData\Roaming\Typora\typora-user-images\image-20200816162933840.png)
+
   + 倒数第二个参数 `lpStartupInfo` 表示我们 **需要这个进程以什么方式打开** 。应用程序有 **默认的打开方式** ，所以不用去改什么东西。这个结构体的结构如下
 
     ```cpp
@@ -337,3 +345,15 @@
   1. `VOID　ExitProcess(UINT  fuExitCode)` **===>进程自己调用**
   2. `TerminateProcess(HANDLE hProcess, UINT fuExitCode)` **===>终止其他进程**
   3. ·`ExitThread` **===>终止进程中的所有线程，进程也会终止**
+
++ `CreateProcess` 的时候传进去的倒数第三个参数虽然可以不填真正的路径，但是填的路径必须是在这个计算机中存在的路径。不然目标程序是无法启动的，如图
+
+  ![image-20200816165350984](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200816165350984.png)
+
+
+
+## 壳项目
+
++ 壳可以分为两类： **二进制壳** 和 **源代码壳（指令壳）**
+
+  
