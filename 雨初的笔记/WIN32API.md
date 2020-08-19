@@ -377,3 +377,20 @@
 + `EnumChildWindows` 第一个参数是父窗口，第二个参数是 **回调函数** 。当遍历到子窗口的时候调用回调函数。如果回调函数返回 `TRUE` 则继续遍历下一个窗口。如果回调函数返回 `FALSE` 则终止遍历。
 
   > 其第三个参数lParam是自己传给那个回调函数的值（回调函数第二个参数就是它）
+
++ ```cpp
+  BOOL EnumWindows(WNDENUMPROC lpEnumFunc,  // callback function
+                   LPARAM lParam);          // application-defined value);
+  ```
+
+  用来枚举桌面上的所有窗口。枚举到的时候调用回调函数。 `lParam` 是传入回调函数的值。
+
++ 隐藏控制台
+
+  ```
+  #pragma   comment(linker,"/subsystem:\"windows\"  /entry:\"mainCRTStartup\""   ) 
+  ```
+
++ 手动添加地址
+
+  ![image-20200819182547428](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200819182547428.png)
