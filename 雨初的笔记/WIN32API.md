@@ -394,3 +394,14 @@
 + 手动添加地址
 
   ![image-20200819182547428](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200819182547428.png)
+
++ `shellcode` 本身就是一段硬编码。但是 `shellcode` 是一段可以随便放的硬编码。
+
++ 硬编码 `shellcode` 化的两个最核心的思路 
+
+  1. 不要在代码中使用全局变量
+
+  2. 不要使用 `IAT` 表（用什么函数自己去写，自己去获取）
+  3. 
+
++ `inline hook` 就是 `call` ， `iat hook` 就是 `jmp`
