@@ -95,3 +95,23 @@
   ![image-20200803111907063](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200803111907063.png)
 
 + 一个 `WCHAR` 大小是2个字节（一个 `WORD` ）![image-20200803123923855](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200803123923855.png)
+
++ 资源类型
+
+  ![image-20200803185230591](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200803185230591.png)
+
+  ![image-20200803185322604](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200803185322604.png)
+
+![image-20200805110013917](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200805110013917.png)
+
++ vc6中 `#define` 后 `do` 可以自动补全 `do while(0)`
+
++ 要想知道某个缩写的全称是什么就google搜 **what does \*\* stand for** 吧，中文搜索是不指望了， `stackoverflow` 上面可能能找到答案。
+
+  > 所以要好好学英语啊！！
+
+  ![image-20200806220713807](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200806220713807.png)
+
++ `VC6` 好像不支持代码折叠。
+
+
