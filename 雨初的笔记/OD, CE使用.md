@@ -17,3 +17,7 @@
 + ![image-20200820103447643](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200820103447643.png)
 
   这个可以设置高亮模式
+  
++ `pushad` 之后 `popad` ，**标志寄存器** 里面的值并不会被改变。
+
++ `pushfd` 可以保存标志寄存器的值。之后再 `popfd` 恢复。

@@ -33,3 +33,33 @@
   >很明显，所有未加static修饰的函数和全局变量具有全局可见性，其他的源文件也能够访问。static修饰函数和变量这一特性可以在不同的文件中定义同名函数和同名变量，而不必担心命名冲突。如果要让这个函数只有局部可见性，就要给它加上 `static`
   >
   >[static](https://blog.csdn.net/FreeApe/article/details/50979425)
+
++ 出现编码问题的时候这样做
+
+  ```cpp
+  #ifdef _UNICODE
+  #define _tprintf wprintf
+  #else
+  #define _tprintf printf
+  #endif
+  ```
+
++ `setlocale` 好像是用来解决编码问题的。
+
++ ```cpp
+  #ifdef _UNICODE
+  #define _tprintf wprintf
+  #else
+  #define _tprintf printf
+  #endif
+  
+  _tprintf(TEXT(""),...);
+  ```
+
+  这样可以写出兼容的代码。
+
+  在VC6中 `TEXT("")` == `("")`
+
+  而在VS中  `TEXT("")` == `("")`
+
+  

@@ -395,6 +395,8 @@
 
   ![image-20200819182547428](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200819182547428.png)
 
+  ## 注入
+
 + `shellcode` 本身就是一段硬编码。但是 `shellcode` 是一段可以随便放的硬编码。
 
 + 硬编码 `shellcode` 化的两个最核心的思路 
@@ -405,3 +407,11 @@
   3. 
 
 + `inline hook` 就是 `call` ， `iat hook` 就是 `jmp`
+
++ 输入法注入
+
++ `GetMuduleHandle`
+
++ `IATHOOK` 是有局限性的。其只能hook `IAT` 表里面有的函数。如果直接用函数指针调用就hook不到了。
+
++ `inlineHOOK` 必须要有 **5个字节** 才能HOOK，`E8 XXXXX` 或者 `E9 XXXXX` 。多的就 `90 NOP` 掉。
