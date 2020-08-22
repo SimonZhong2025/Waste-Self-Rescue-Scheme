@@ -415,3 +415,26 @@
 + `IATHOOK` 是有局限性的。其只能hook `IAT` 表里面有的函数。如果直接用函数指针调用就hook不到了。
 
 + `inlineHOOK` 必须要有 **5个字节** 才能HOOK，`E8 XXXXX` 或者 `E9 XXXXX` 。多的就 `90 NOP` 掉。
+
++ **模块** 注入不一定是 **dll** 注入。你也可以把一个 `exe` 贴到别的进程里面，一样可以跑起来。
+
++ `loadlibrary` 和线程函数的调用约定( `__stdcall` )，返回值 `HMODULE`(DOWRD)，都完全一样，这是偶然，可以利用来进行远程线程注入。
+
++ 可以用 `OpenProcess` 来通过进程的 `PID` 来获取已存在的进程的句柄。
+
++ `VirtualAllocEx` 在其他进程中申请空间。
+
++ `GetCurrentProcess` 返回本进程的 **伪句柄** 。这个句柄只能在当前进程使用，并可以作为参数传入需要调用的函数中。其实这个 **伪句柄** 的值就是 `-1` 。这个函数只是简单地返回一个 `-1` 而已。所以这个句柄不能通过 `CloseHandle` 关掉。
+
+## 其他
+
++ dll的入口函数是
+
+  ```cpp
+  BOOL APIENTRY DllMain(HANDLE hModule, DWORD ul_reason_for_call,
+                        LPVOID lpReserved)
+  ```
+
+  其中 `ul_reason_for_call` 可能的值是 `DLL_PROCESS_ATTACH` , `DLL_THREAD_ATTACH` , `DLL_THREAD_DETACH` , `DLL_THREAD_DETACH` ，分别是dll被load进进程，线程创建，线程结束，dll被卸载。
+
++ `debugView` 里面按 `ctrl + x` 可以清除所有输出。
