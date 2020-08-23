@@ -82,7 +82,7 @@ print("{:.2f}".format(eval(a)))
 
 ```
 a = "零一二三四五六七八九"
-Str = input()
+Str = input() #Python和java不同，python输入的内容都是字符串
 for i in Str: # 从字符串的第一个符号到最后一个符号
     print(a[eval(i)], end='')
 ```
@@ -106,6 +106,8 @@ for fruit in fruits:        # 第二个实例
  
 print "Good bye!"
 ```
+
+这个`for in`是一个检阅的一个作用，我们可以除了可以有上述的用法之类，我们还可以检阅文件、或者某个文件中的行
 
 ###### 输出结果
 ```
