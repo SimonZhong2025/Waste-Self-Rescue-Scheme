@@ -426,6 +426,10 @@
 
 + `GetCurrentProcess` 返回本进程的 **伪句柄** 。这个句柄只能在当前进程使用，并可以作为参数传入需要调用的函数中。其实这个 **伪句柄** 的值就是 `-1` 。这个函数只是简单地返回一个 `-1` 而已。所以这个句柄不能通过 `CloseHandle` 关掉。
 
++ `VirtualAllocEx` 倒数第二个参数，如果是 `MEM_RESERVE` 的话则操作系统会计算将块保留在哪里，但是 **它不会分配任何东西** ，当使用 `MEM_COMMIT` 的时候操作系统在之前保留的块上面分配虚拟页面。
+
++ <https://stackoverflow.com/questions/21368429/error-code-487-error-invalid-address-when-using-virtualallocex/21683133#21683133> 然而并没有解决我的问题。
+
 ## 其他
 
 + dll的入口函数是
