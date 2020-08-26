@@ -436,6 +436,15 @@
 
 + 如果 `GetModuleHandle` 里面传入的值为空，获取的是创建这个线程的程序自身的句柄。
 
++ 可以通过这个
+
+  ```cpp
+  VirtualProtect(moduleInfo.lpBaseOfDll, moduleInfo.SizeOfImage,
+  		PAGE_EXECUTE_READWRITE, &dwOldProtect)
+  ```
+
+  改变某块地址的属性
+
 ## 其他
 
 + dll的入口函数是
@@ -472,3 +481,7 @@
 + 错误代码299表示read或者write进程数据失败。这时候要想到是不是没有为读到的东西分配放的地方。要先
 
   `pImageBuffer = malloc(moduleInfo.SizeOfImage)` 为指针分配内存空间。
+
++ 进行 `IAT HOOK` 的时候一定要用 `WINAPI` ，不然由于原来的API是内平栈，而默认生成的函数是外平栈，会导致 **堆栈不平衡** 引发 **crash** 。
+
++ `WriteProcessMemory` 倒数第三个参数是一个指向需要写入的数据的指针，而不是数据。
