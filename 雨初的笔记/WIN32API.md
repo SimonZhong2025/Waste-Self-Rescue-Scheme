@@ -1,3 +1,5 @@
+[TOC]
+
 + 获取文本框句柄
 
   ```cpp
@@ -430,6 +432,10 @@
 
 + <https://stackoverflow.com/questions/21368429/error-code-487-error-invalid-address-when-using-virtualallocex/21683133#21683133> 然而并没有解决我的问题。
 
++ 是 `GetProcAddress` ，海哥的课件里面一直总是写错这个函数名。这个函数的返回值是脑瘫的 `FARPROC` ，不是 `HANDLE` ，我跪了。
+
++ 如果 `GetModuleHandle` 里面传入的值为空，获取的是创建这个线程的程序自身的句柄。
+
 ## 其他
 
 + dll的入口函数是
@@ -442,3 +448,27 @@
   其中 `ul_reason_for_call` 可能的值是 `DLL_PROCESS_ATTACH` , `DLL_THREAD_ATTACH` , `DLL_THREAD_DETACH` , `DLL_THREAD_DETACH` ，分别是dll被load进进程，线程创建，线程结束，dll被卸载。
 
 + `debugView` 里面按 `ctrl + x` 可以清除所有输出。
+
++ 如果需要得到当前运行的程序的 `ImageBase` ，可以用 `GetModuleHandle(NULL)` 来实现。或者如果还想知道当前模块的 `OEP` ， `SizeOfImage` ，可以用 `GetModuleInformation` 来实现。 其可以得到
+
+  ```cpp
+  typedef struct _MODULEINFO {
+      LPVOID lpBaseOfDll;
+      DWORD SizeOfImage;
+      LPVOID EntryPoint;
+  } MODULEINFO, *LPMODULEINFO;
+  ```
+
+  这样的一个结构体。
+
+  则使用时可以这样用
+
+  ```cpp
+  GetModuleInformation(GetCurrentProcess(), GetModuleHandle(NULL), 
+                       &moduleInfo, sizeof(moduleInfo));
+  ```
+  需要注意的是 `MODULEINFO` 这个结构体在 `psapi.h` 这个头文件中。
+
++ 错误代码299表示read或者write进程数据失败。这时候要想到是不是没有为读到的东西分配放的地方。要先
+
+  `pImageBuffer = malloc(moduleInfo.SizeOfImage)` 为指针分配内存空间。
