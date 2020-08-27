@@ -6,7 +6,7 @@
 
 + 在这里我们的目标是添加一个弹出MessageBox的shellcode，其代码为 `MessageBox(0, 0, 0, 0)` ，执行效果为
 
-  ![无法加载请爬梯子](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/20200706112744.png)
+  ![无法加载请爬梯子](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/20200706112744.png)
 
 ## 准备工作
 
@@ -25,7 +25,7 @@
 
   然后在MessageBox处打上断点，进入反汇编，F11跟入，可找到 `MessageBox` 所在的地址为 **77D507EA** 。
 
-  ![无法加载请爬梯子](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/20200706113033.png)
+  ![无法加载请爬梯子](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/20200706113033.png)
 
   或者也可以用代码找到MessageBox的地址，代码如下
 
@@ -50,21 +50,21 @@
 
   同样可以得到其相对地址。
 
-  ![无法加载请爬梯子](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/20200706113408.png)
+  ![无法加载请爬梯子](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/20200706113408.png)
 
 ## 开始添加shellcode
 
 + 得到 `MessageBox` 地址之后开始准备添加shellcode。先用PETOOL查出其ImageBase、文件对齐和文件入口点OEP，如下，则其入口点为 `86E0` , `ImageBase` 为 `40000` ，文件对齐为 `1000`
 
-![无法加载请爬梯子](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/20200706115752.png)
+![无法加载请爬梯子](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/20200706115752.png)
 
 + 然后在节表信息中找到某个节是否有多余的空间
 
-  ![无法加载请爬梯子](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200706114021998.png)
+  ![无法加载请爬梯子](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/image-20200706114021998.png)
 
   这里可以得到307E0-31000这一段区域应该是没有被使用的，于是打开 **WinHex** ，按 `Alt + G`  跳转到31000位置
 
-  ![无法加载请爬梯子](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/20200706114235.png)
+  ![无法加载请爬梯子](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/20200706114235.png)
 
   发现一大片空白区。随意选择一处添加入我们的shellcode
 
@@ -72,37 +72,37 @@
 
 + 接下来开始算 `CALL` 和 `JMP` 后面跟着的参数。其计算方法为
 
-  ![无法加载请爬梯子](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/20200706114802.png)
+  ![无法加载请爬梯子](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/20200706114802.png)
 
   则通过 `(ImageBase + CALL指令后一条指令的地址) + X = 77D507EA` 算出应该填在E8后面的参数。其中 `77D507EA` 是我们之前得到的MessageBox的地址。
 
-  ![无法加载请爬梯子](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/20200706115053.png)
+  ![无法加载请爬梯子](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/20200706115053.png)
 
   算出得E8后面应跟 `7791F8FD` ，将其填到E8后面。这里注意要将计算器设置为DWORD（双字）
 
   而根据公式，E9后面跟的参数为 `X = 程序入口点OEP - E9这条指令后一条指令的地址` 。之前已经查得程序入口点OEP为 `86E0`
 
-  ![无法加载请爬梯子](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/20200706115727.png)
+  ![无法加载请爬梯子](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/20200706115727.png)
 
   而E9后一条指令的地址为 `30EF2` ，则用计算器算得
 
-  ![无法加载请爬梯子](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/20200706115944.png)
+  ![无法加载请爬梯子](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/20200706115944.png)
 
   E9后面应填 `FFFFD 77EE` 
 
   将其填入， shellcode编写完成
 
-  ![无法加载请爬梯子](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/20200706120045.png)
+  ![无法加载请爬梯子](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/20200706120045.png)
 
 ## 将程序入口点OEP改到添加的shellcode上
 
 接下来是最后一步，将程序原来的入口点改到添加的shellcode （ `30EE0` ）上面，如下
 
-![无法加载请爬梯子](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/20200706120324.png)
+![无法加载请爬梯子](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/20200706120324.png)
 
 修改完成后添加shellcode的工作结束了，接下来保存到原文件，双击便可执行我们添加的shellcode-弹出 `MessageBox`
 
-![无法加载请爬梯子](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/20200706120452.png)
+![无法加载请爬梯子](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/20200706120452.png)
 
 
 

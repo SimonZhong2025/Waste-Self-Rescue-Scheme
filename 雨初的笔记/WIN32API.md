@@ -17,7 +17,7 @@
 
 + 在打开的子窗口里面要用 `EndDialog` 来结束当前的窗口。不能用 `PostQuitMessage` 。后者会连父窗口都一起关闭。
 
-  ![image-20200804201855999](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200804201855999.png)
+  ![image-20200804201855999](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/image-20200804201855999.png)
 
 + 如果需要 **获取或者设置** 某个文本框中的文字
 
@@ -30,11 +30,11 @@
 
 + `WINDEF.H` 中有一个宏 `MAX_PATH` 定义了文件路径最大长度260
 
-  ![image-20200804203749407](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200804203749407.png)
+  ![image-20200804203749407](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/image-20200804203749407.png)
 
 + 在添加了 `.cpp` 文件之后一定要加上 `#include "StdAfx.h"` ，否则会出现 `.sbr` 文件找不到的问题。
 
-  ![image-20200804204455968](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200804204455968.png)
+  ![image-20200804204455968](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/image-20200804204455968.png)
 
 + [慎用USES_CONVERSION 使用和注意](https://blog.csdn.net/thanklife/article/details/70208841) 好像说要慎用 `USES_CONVERSION` ，因为它是在堆栈上分配空间的，不小心很容易栈溢出。最好还是自己写 `W2A A2W` 作用的函数。（这个宏在 `atlconv.h` 头文件里面）
 
@@ -42,7 +42,7 @@
 
 + 画一个组框可以将各种东西框在里面，更加美观
 
-  ![image-20200805104246014](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200805104246014.png)
+  ![image-20200805104246014](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/image-20200805104246014.png)
 
 + 在使用列表控件的时候，因为这些控件都在一个 `dll` 里面，所以要先把这个 `dll` 导入进来
 
@@ -66,23 +66,23 @@
 
 + 消息处理函数最后一定要记得将没有处理的消息 `return FALSE` 放回给系统处理。否则会出现窗口加载不正常的现象。
 
-  ![image-20200805222840820](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200805222840820.png)
+  ![image-20200805222840820](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/image-20200805222840820.png)
 
 + 如果要让点这里的时候下面自动展示相应的数据，回调函数中拦截的消息不是 `WM_COMMAND` ，而应该是 `WM_NOTIFY`  。（也叫通知消息）
 
-  ![image-20200806214950748](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200806214950748.png)
+  ![image-20200806214950748](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/image-20200806214950748.png)
 
 + 拦截到 `WM_NOTIFY` 消息的时候其中的 `lParam` 指向一个结构，这个结构根据具体消息的不同可能会有不同。
 
-  ![image-20200806215159768](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200806215159768.png)
+  ![image-20200806215159768](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/image-20200806215159768.png)
 
 + `WM_NOTIFY` 用法
 
-  ![image-20200806220956941](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200806220956941.png)
+  ![image-20200806220956941](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/image-20200806220956941.png)
 
 + `WINDOWS` 编程的本质是消息驱动的，任何东西都是消息
 
-  ![image-20200806225549205](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200806225549205.png)
+  ![image-20200806225549205](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/image-20200806225549205.png)
 
   如果需要获取用户在列表中选取了哪一行，可以通过 `SendMessage` ，最后一个参数写为 `LUNI_SELECTED` 得到选择了哪一行。
 
@@ -90,43 +90,43 @@
 
 + 在获取用户选择第几行之后再得到这一行里面存储的PID（存储的特定的数据）
 
-  ![image-20200806230327036](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200806230327036.png)
+  ![image-20200806230327036](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/image-20200806230327036.png)
   
 + 这个宏 `MAKEINTRESOURCE` 也可以将一个数字转换为 `char *` 类型，便于传递参数。
 
-  ![image-20200725202941156](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200725202941156.png)
+  ![image-20200725202941156](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/image-20200725202941156.png)
 
-  ![image-20200725203108905](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200725203108905.png)
+  ![image-20200725203108905](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/image-20200725203108905.png)
 
 + 想要删除所有元素的时候句柄都得实时获取才行，原因不清楚。
 
-  ![image-20200807163121870](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200807163121870.png)
+  ![image-20200807163121870](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/image-20200807163121870.png)
 
-  ![image-20200807163236455](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200807163236455.png)
+  ![image-20200807163236455](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/image-20200807163236455.png)
 
-  ![image-20200807163306486](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200807163306486.png)
+  ![image-20200807163306486](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/image-20200807163306486.png)
 
   难道是我那三个函数里面的逻辑问题？不小心把这个指针指向 `NULL` 了？先放着懒得追究了（懒得理直气壮），记得每次 `GetDlgItem` 就没事了。
 
-+ ![image-20200807195738904](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200807195738904.png)
++ ![image-20200807195738904](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/image-20200807195738904.png)
 
 + 进程是静止的，就是指一个4GB的空间里面都放了什么。线程是指里面有几个同时执行的程序
 
 + WIN10的任务管理器里面跳到详细信息然后右键可以调出选择列选项
 
-  ![image-20200807221027008](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200807221027008.png)
+  ![image-20200807221027008](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/image-20200807221027008.png)
 
 + 加上 `::` 表示其不属于任何一个类，其是一个全局的函数。最好加上。可以避免和其他一些同名的函数冲突
 
-  ![image-20200807222038945](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200807222038945.png)
+  ![image-20200807222038945](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/image-20200807222038945.png)
 
 + `::CloseHandle` 之后只是说这个句柄我不用了，并不是说线程就挂了。事实上线程还在跑。句柄只是三环和零环的一个接口（？），关掉这个句柄并不会关掉这个线程。
 
-  ![image-20200807222159616](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200807222159616.png)
+  ![image-20200807222159616](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/image-20200807222159616.png)
 
 + 这里千万不能传一个 `&x` 地址进去。因为 `MyTest` 这个函数执行完了之后堆栈就销毁了，传到新线程中的那个指针已经指向垃圾数据了。所以在多线程中谨慎传指针，不然容易出错。（另外如果这里的 `x` 是一个 `static int` 的话也不会出现这种问题。）
 
-  ![image-20200807223201071](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200807223201071.png)
+  ![image-20200807223201071](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/image-20200807223201071.png)
 
 + `sprintf` 和 `sscnaf` 吹爆！！！
 
@@ -134,7 +134,7 @@
 
 + `::SuspendThread(hThread)` 挂起线程。 `::ResumeThread(hThread)` 恢复线程，而终止线程有三种方式
 
-  ![image-20200808002327738](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200808002327738.png)
+  ![image-20200808002327738](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/image-20200808002327738.png)
 
   + 如果是用 `::ExitThread` 方法退出，就是直接退出了， **只是把调用的堆栈空间释放了** 。在堆里面的东西不管。比如你在这个线程里面创建了一个对象，如果是 `ExitThread` 方法来退出的话程序并不会自动帮你调用析构函数，该在哪还是在哪。（内存泄露警告！）
   + 如果是用 `::TerminateThread` 方法结束线程， **异步** 退出线程， 并且 **不会清理堆栈** 。
@@ -217,7 +217,7 @@
 
   内核对象在高2G的空间中。所有的进程都可以访问到非匿名的内核对象。
 
-  ![image-20200814224233841](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200814224233841.png)
+  ![image-20200814224233841](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/image-20200814224233841.png)
 
 + `CreateEvent` 的第二个参数 `bManualReset` 的意义是：
 
@@ -231,7 +231,7 @@
 
 + 如果一个线程要归还控制权，将一个事件设置为 **已通知状态** ，需要使用 `SetEvent` 函数达到目的。
 
-+ 惨案。。![image-20200815002118623](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200815002118623.png)![image-20200814234047255](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200814234047255.png)
++ 惨案。。![image-20200815002118623](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/image-20200815002118623.png)![image-20200814234047255](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/image-20200814234047255.png)
 
   改这一个地方花了我20分钟。
 
@@ -350,7 +350,7 @@
 
 + `CreateProcess` 的时候传进去的倒数第三个参数虽然可以不填真正的路径，但是填的路径必须是在这个计算机中存在的路径。不然目标程序是无法启动的，如图
 
-  ![image-20200816165350984](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200816165350984.png)
+  ![image-20200816165350984](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/image-20200816165350984.png)
 
 
 
@@ -367,7 +367,7 @@
 
 + `RECT` 结构体和矩阵差不多，都是这样的X，Y轴。（？完蛋X是向下还是向右都给忘了）
 
-  ![image-20200819151603902](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200819151603902.png)
+  ![image-20200819151603902](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/image-20200819151603902.png)
 
 + `FindWindowEx` 用来查找一个父窗口中符合条件的子窗口。
 
@@ -395,7 +395,7 @@
 
 + 手动添加地址
 
-  ![image-20200819182547428](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200819182547428.png)
+  ![image-20200819182547428](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/image-20200819182547428.png)
 
   ## 注入
 
@@ -485,3 +485,5 @@
 + 进行 `IAT HOOK` 的时候一定要用 `WINAPI` ，不然由于原来的API是内平栈，而默认生成的函数是外平栈，会导致 **堆栈不平衡** 引发 **crash** 。
 
 + `WriteProcessMemory` 倒数第三个参数是一个指向需要写入的数据的指针，而不是数据。
+
++ `inlinehook` 还要注意线程安全问题。

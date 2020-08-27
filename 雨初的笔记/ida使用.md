@@ -8,11 +8,11 @@
 
 + 一般来说
 
-+ 按下空格可以从![image-20200826164322606](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200826164322606.png)
++ 按下空格可以从![image-20200826164322606](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/image-20200826164322606.png)
 
   这种界面切换到
 
-  ![image-20200826164341789](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200826164341789.png)
+  ![image-20200826164341789](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/image-20200826164341789.png)
 
   这种界面。
 
@@ -22,7 +22,7 @@
   + D-数据，默认db,再按dw，再按dd
   + U-未定义，IDA会直接放16进制数字，不转换为任何东西
 
-+ ![image-20200826165312104](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200826165312104.png)
++ ![image-20200826165312104](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/image-20200826165312104.png)
 
   设置硬编码长度，最长16（硬编码最长16）
 
@@ -38,16 +38,16 @@
 
   + 按分号 `;` 注释，所有往这个地方跳的代码都会显示这个注释的副本
 
-    ![image-20200826170100077](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200826170100077.png)
+    ![image-20200826170100077](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/image-20200826170100077.png)
 
   + 按 `:` 注释，往这个地方跳的代码不会显示这个注释的副本（按住shift + ;）
 
   + 针对函数的注释，按下分号 `;` 
 
-    ![image-20200826170250615](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200826170250615.png)
+    ![image-20200826170250615](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/image-20200826170250615.png)
 
     可以在函数上方注释函数的特征
 
-+ ![image-20200826170343212](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200826170343212.png)
++ ![image-20200826170343212](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/image-20200826170343212.png)
 
   交叉引用，可以列出所有使用这个函数的地方。

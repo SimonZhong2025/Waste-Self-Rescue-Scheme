@@ -8,7 +8,7 @@
 
 + 在内存窗口中转到表达式 `ctrl + g`
 
-  ![image-20200824200509769](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200824200509769.png)
+  ![image-20200824200509769](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/image-20200824200509769.png)
 
 # CE
 
@@ -20,7 +20,7 @@
 
 + x32dbg.ini / x64dbg.ini 可以设置配色
 
-+ ![image-20200820103447643](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200820103447643.png)
++ ![image-20200820103447643](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/image-20200820103447643.png)
 
   这个可以设置高亮模式
   

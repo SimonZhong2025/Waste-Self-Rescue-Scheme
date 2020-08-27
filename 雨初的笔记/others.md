@@ -1,4 +1,4 @@
-![无法加载请爬梯子](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/20200706175612.png)
+![无法加载请爬梯子](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/20200706175612.png)
 
 + 将vs里面的唤醒代码提示快捷键设置成了 `ALT + /`
 
@@ -12,7 +12,7 @@
 
 + 打开内存监控窗口
 
-  ![无法加载请爬梯子](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/20200721115806.png)
+  ![无法加载请爬梯子](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/20200721115806.png)
 
 + 若要打开“自动变量”窗口，请在调试时依次选择“调试” > “窗口” > “自动变量”，或按 Ctrl+Alt+V > A 调试 
 
@@ -20,7 +20,7 @@
 
 + `LOBYTE` 截取4字节的低两位， `HIBYTE` 截取高两位
 
-  ![](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/20200723002011.png)
+  ![](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/20200723002011.png)
   
 + 知道自己哪不会你就已经会了 --海哥
 
@@ -78,31 +78,31 @@
 
   + 视图中的 `C` 是 `CPU窗口` ，点开之后可以回到一打开就看到的那个窗口。
 
-    ![](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/20200725195815.png) 
+    ![](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/20200725195815.png) 
 
 + `ALT + 0` 和 `ALT + 2` 可以打开空间和输出视图。
 
 + 要让对话框中的按钮对齐可以调出这个工具栏然后点击相应的按钮，就可以达到左对齐上对齐下对齐的目的。
 
-  ![image-20200725220538272](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200725220538272.png)
+  ![image-20200725220538272](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/image-20200725220538272.png)
 
 + autohotkey停止脚本
 
-  ![image-20200802235816841](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200802235816841.png)
+  ![image-20200802235816841](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/image-20200802235816841.png)
 
 + `UltraEdit` 修改布局
 
-  ![image-20200803111907063](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200803111907063.png)
+  ![image-20200803111907063](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/image-20200803111907063.png)
 
-+ 一个 `WCHAR` 大小是2个字节（一个 `WORD` ）![image-20200803123923855](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200803123923855.png)
++ 一个 `WCHAR` 大小是2个字节（一个 `WORD` ）![image-20200803123923855](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/image-20200803123923855.png)
 
 + 资源类型
 
-  ![image-20200803185230591](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200803185230591.png)
+  ![image-20200803185230591](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/image-20200803185230591.png)
 
-  ![image-20200803185322604](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200803185322604.png)
+  ![image-20200803185322604](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/image-20200803185322604.png)
 
-![image-20200805110013917](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200805110013917.png)
+![image-20200805110013917](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/image-20200805110013917.png)
 
 + vc6中 `#define` 后 `do` 可以自动补全 `do while(0)`
 
@@ -110,7 +110,7 @@
 
   > 所以要好好学英语啊！！
 
-  ![image-20200806220713807](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20200806220713807.png)
+  ![image-20200806220713807](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/image-20200806220713807.png)
 
 + `VC6` 好像不支持代码折叠。
 
