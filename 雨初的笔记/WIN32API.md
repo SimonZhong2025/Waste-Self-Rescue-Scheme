@@ -487,3 +487,5 @@
 + `WriteProcessMemory` 倒数第三个参数是一个指向需要写入的数据的指针，而不是数据。
 
 + `inlinehook` 还要注意线程安全问题。
+
++ `VirtualProtect` 和 `VirtualProtectEx` 的区别是前者只能改变当前进程的保护，而后者可以根据第一个参数（进程句柄）指定需要改写保护属性的进程。

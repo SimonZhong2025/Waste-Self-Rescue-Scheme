@@ -63,3 +63,11 @@
   而在VS中  `TEXT("")` == `("")`
 
 + `typedef` 一种函数指针的方法 **typedef  返回类型(*新类型)(参数表)**
+
++ 裸函数好像不能声明，只能直接写
+
+  http://www.errorbase.net/1367/error-c2488-identifier-naked-can-only-be-applied-to-non-member-function-definitions
+
+  ![image-20200828111413743](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/image-20200828111413743.png)
+
++ 改写函数里面的硬编码的时候不要在函数头下断点，会改不了。
