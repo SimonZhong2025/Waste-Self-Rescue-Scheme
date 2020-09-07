@@ -92,3 +92,63 @@
 
 + **参数定义的顺序必须是：必选参数、默认参数、可变参数、命名关键字参数和关键字参数。**
 + `list` ，`tuple` ，`字符串` 都可以进行切片操作。切片操作第一个参数是起始位置，第二个参数是终止位置，第三个参数是隔多少个元素取一个。起始位置和结束位置都可以是负数（倒着数）
+
++ `dict` 迭代的是key。如果要迭代 `value` ，可以用`for value in d.values()`，如果要同时迭代 `key` 和 `value` ，可以用`for k, v in d.items()`。
+
++ 如果需要判断某个对象是否为可迭代的对象，可以通过collections模块的Iterable类型判断
+
+  ```python
+  >>> from collections import Iterable
+  >>> isinstance('abc', Iterable) # str是否可迭代
+  True
+  >>> isinstance([1,2,3], Iterable) # list是否可迭代
+  True
+  >>> isinstance(123, Iterable) # 整数是否可迭代
+  False
+  ```
+
++ 如果想通过下标循环一个列表，可以用内置的 `enumerate` 函数
+
+  ```python
+  >>> for i, value in enumerate(['A', 'B', 'C']):
+  ...     print(i, value)
+  ...
+  0 A
+  1 B
+  2 C
+  ```
+
++ 列表生成式后面的 `if` 是一个筛选条件，后面不能加上 `else` ，但是如果 `if` 放在 `for` 前面则必须加上 `else` 。因为此时是一个生成式。
+
++ 一个 **生成器** 和一个 **列表生成式** 的区别只是生成器是用 `()` 包起来的，而一个列表生成式是用 `[]` 包起来的。 一个生成器的值可以通过 `next(生成器)` 不断获得。
+
+  ```python
+  >>> g = (x * x for x in range(5))
+  >>> g
+  <generator object <genexpr> at 0x1022ef630>
+  >>> next(g)
+  0
+  >>> next(g)
+  1
+  >>> next(g)
+  4
+  >>> next(g)
+  9
+  >>> next(g)
+  16
+  >>> next(g)
+  25
+  
+  >>> next(g)
+  Traceback (most recent call last):
+    File "<stdin>", line 1, in <module>
+  StopIteration
+  ```
+
++ ```python
+  for i in range(5):
+      print(i)
+  #输出是0 1 2 3 4
+  ```
+
+  
