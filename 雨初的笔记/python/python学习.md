@@ -38,4 +38,51 @@
 
   这样可以获得多个变量。但事实上返回的还是一个返回值，不过这个返回值是一个元组。	
 
-+ **定义默认参数要牢记一点：默认参数必须指向不变对象！** 如果将默认参数设置为一个列表list，那么每次传入的参数都会被认为是下一次传入的默认参数。
++ **定义默认参数要牢记一点：默认参数必须指向不变对象！** 如果将默认参数设置为一个列表list，那么上一次调用函数结束时这个参数的值会保留到下一次函数调用的时候。如下
+
+  ```python
+  def add_end(L=[]):
+      L.append('END')
+      return L
+  
+  >>> add_end()
+  ['END']
+  >>> add_end()
+  ['END', 'END']
+  >>> add_end()
+  ['END', 'END', 'END']
+  ```
+
++ 在传入的参数前面加上一个 `*` 可以传入任意个参数（包括0个）。而在传入的参数前面加上 `**` 则可以传入字典。如 `city = 'Beijing'` 。
+
+  ```python
+  def calc(*numbers):
+      sum = 0
+      for n in numbers:
+          sum = sum + n * n
+      return sum
+  
+  >>> calc(1, 2)
+  5
+  >>> calc()
+  0
+  
+  # 而如果想要直接传一个list或者tuple进去，则可以在这个list或者tuple前面加上*，如下
+  >>> nums = [1, 2, 3]
+  >>> calc(*nums)
+  14
+  ```
+
+  而如果想要传一个字典到一个参数中有 `**dict` 的函数中去，也可以传字典，如下
+
+  ```python
+  def person(name, age, **kw):
+      print('name:', name, 'age:', age, 'other:', kw)
+  
+  >>> extra = {'city': 'Beijing', 'job': 'Engineer'}
+  >>> person('Jack', 24, **extra)
+  name: Jack age: 24 other: {'city': 'Beijing', 'job': 'Engineer'}
+  ```
+
+  
+
