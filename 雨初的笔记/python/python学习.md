@@ -160,3 +160,24 @@
   + 当然，对于一个可迭代的函数，我们也通常不会使用 `next` 来迭代这个函数，而是使用 `for` 来对这个生成器进行迭代。
 
 + 生成器都是`Iterator`对象，但`list`、`dict`、`str`虽然是`Iterable`，却不是`Iterator`。
+
+  + 要能使用 `next` 获取下一对象的对象才能称为 `Iterator` 对象。
+  + 如果需要将列表、元组、字典变为可迭代的对象，可以使用内置的 `iter` 方法。
+
++ ```python
+  for x in [1, 2, 3, 4, 5]:
+      pass
+  
+  #完全等价于
+  
+  it = iter([1, 2, 3, 4, 5]) # 首先获得Iterator对象:
+  while True: # 循环:
+      try:
+          # 获得下一个值:
+          x = next(it)
+      except StopIteration:
+          # 遇到StopIteration就退出循环
+          break
+  ```
+
++ 
