@@ -98,7 +98,7 @@
 + 如果需要判断某个对象是否为可迭代的对象，可以通过collections模块的Iterable类型判断
 
   ```python
-  >>> from collections import Iterable
+  >>> from collections.abc import Iterable
   >>> isinstance('abc', Iterable) # str是否可迭代
   True
   >>> isinstance([1,2,3], Iterable) # list是否可迭代
@@ -151,4 +151,12 @@
   #输出是0 1 2 3 4
   ```
 
-  
++ 一个生成器在迭代到最后一个元素，没有更多的元素的时候会抛出 `StopIteration` 错误。
+
++ 一般使用生成器的时候也是用 `for` 循环来迭代里面的元素，因为 `generator` 也是可迭代对象。
+
++ 对于一个有 `yield` 的函数，它返回的是一个迭代器，并不是在 `return` 语句处返回，而是每次调用 `yeild` 的时候执行，遇到 `yeild` 返回，再次执行的时候从上次返回的 `yeild` 语句处继续执行。
+
+  + 当然，对于一个可迭代的函数，我们也通常不会使用 `next` 来迭代这个函数，而是使用 `for` 来对这个生成器进行迭代。
+
++ 生成器都是`Iterator`对象，但`list`、`dict`、`str`虽然是`Iterable`，却不是`Iterator`。
