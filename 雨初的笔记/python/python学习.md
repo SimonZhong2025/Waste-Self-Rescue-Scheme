@@ -1,11 +1,19 @@
 + `str.rstrip` 删除右侧空格
+
 + `列表.append(元素)` 在list后面添加元素
+
 + `列表.insert(x, 元素)` 将元素插入到列表的x下标处
+
 + 所以`for x in ...`循环就是把每个元素代入变量`x`，然后执行缩进块的语句。
+
 + `range(x)` 可以生成一个整数序列，再通过 `list()` 可以转换为list
+
 + 判断一个dict里是否有某个key，可以 `'Thomas' in d` ，用in来判断，如果这个字典里面没有以 `Thomas` 为键的值则返回 `False`
+
 + set和dict一样都不可放 **不可变对象** 。所以不能将一个 `list` 放到一个 `set` 里面
+
 + 可以将一个 `tuple` 放到一个 `set` 里面，但是这个 `tuple` 里面不能有 `list` ，因为 `list` 是可变的对象
+
 + `set` 里面没有重复的元素
 
 + `max` 可以传进去元组或者列表，也可以传进去多个 `int`(浮点也行)
@@ -91,6 +99,7 @@
   命名关键字参数必须传入参数名，这和位置参数不同。 **如果没有传入参数名，调用将报错。**
 
 + **参数定义的顺序必须是：必选参数、默认参数、可变参数、命名关键字参数和关键字参数。**
+
 + `list` ，`tuple` ，`字符串` 都可以进行切片操作。切片操作第一个参数是起始位置，第二个参数是终止位置，第三个参数是隔多少个元素取一个。起始位置和结束位置都可以是负数（倒着数）
 
 + `dict` 迭代的是key。如果要迭代 `value` ，可以用`for value in d.values()`，如果要同时迭代 `key` 和 `value` ，可以用`for k, v in d.items()`。
@@ -180,4 +189,26 @@
           break
   ```
 
-+ 
++ python可以写出函数式的代码
+
+  ```python
+  def add(x, y, f):
+      return f(x) + f(y)
+  
+  print(add(-5, 6, abs))
+  # 结果为11
+  ```
+
++ 要使用 `reduce` 需要在开头加上 `from functools import reduce`
+
+  ```python
+  >>> from functools import reduce
+  >>> def add(x, y):
+  ...     return x + y
+  ...
+  >>> reduce(add, [1, 3, 5, 7, 9])
+  25
+  ```
+
+  `reduce` 中，函数接受两个参数， `reduce` 将结果继续和序列的下一个元素进行累积运算。
+
