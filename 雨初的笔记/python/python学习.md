@@ -590,3 +590,163 @@
   ```
 
   `__call__()` 中也可以传入参数，完全可以将其当作一个函数来进行调用。事实上在python中一个实例和一个函数也并没有什么本质上的区别。
+
++ 通过`callable()`函数，我们就可以判断一个对象是否是“可调用”对象。
+
++ `@unique`装饰器可以帮助我们检查保证没有重复值。(要 `from enum import Enum, unique` )
+
++ 要创建一个 `class` 对象， `type()` 函数依次传入3个参数
+
+  ```python
+  type(class的名称, 继承的父类集合, class的方法名称和函数绑定)
+  ```
+
+  实例如下
+
+  ```python
+  >>> def fn(self, name='world'): # 先定义函数
+  ...     print('Hello, %s.' % name)
+  ...
+  >>> Hello = type('Hello', (object,), dict(hello=fn)) # 创建Hello 
+  class
+  >>> h = Hello()
+  >>> h.hello()
+  Hello, world.
+  >>> print(type(Hello))
+  <class 'type'>
+  >>> print(type(h))
+  <class '__main__.Hello'>
+  ```
+
++ 如果要使用 `metaclass` ，要使用如下代码
+
+  ```python
+  # metaclass是类的模板，所以必须从`type`类型派生：
+  class ListMetaclass(type):
+      def __new__(cls, name, bases, attrs):
+          attrs['add'] = lambda self, value: self.append(value)
+          return type.__new__(cls, name, bases, attrs)
+  ```
+
+  其中 **metaclass** 必须从 `type` 类派生出来，且这个 **metaclass** 中必须有 `__new__()` 方法。
+
+## 
+
++ 如果有一段代码可能会出错，可以用 `try` 去运行它。一旦这段代码执行出错，则后续代码不会继续执行，而是直接跳转到错误处理代码，即 `except` 代码块，如果执行完 `except` 之后后面还有 `finally` 语句块，则继续执行 `finally` 语句块。 **`finally` 代码块无论出现错误与否都会被执行。**
+
++ 如果可能产生的错误有不同种类，则可以通过不同 `except` 语句块处理，如下：
+
+  ```python
+  try:
+      print('try...')
+      r = 10 / int('a')
+      print('result:', r)
+  except ValueError as e:
+      print('ValueError:', e)
+  except ZeroDivisionError as e:
+      print('ZeroDivisionError:', e)
+  finally:
+      print('finally...')
+  print('END')
+  ```
+
++ 使用`try...except`捕获错误还有一个巨大的好处，就是可以跨越多层调用，比如函数`main()`调用`bar()`，`bar()`调用`foo()`，结果`foo()`出错了，这时，只要`main()`捕获到了，就可以处理：
+
+  ```python
+  def foo(s):
+      return 10 / int(s)
+  
+  def bar(s):
+      return foo(s) * 2
+  
+  def main():
+      try:
+          bar('0')
+      except Exception as e:
+          print('Error:', e)
+      finally:
+          print('finally...')
+  ```
+
++ python内置的 `logging` 模块可以非常容易地记录错误信息，如 `logging.exception(e)`
+
+  ```python
+  # err_logging.py
+  
+  import logging
+  
+  def foo(s):
+      return 10 / int(s)
+  
+  def bar(s):
+      return foo(s) * 2
+  
+  def main():
+      try:
+          bar('0')
+      except Exception as e:
+          logging.exception(e)
+  
+  main()
+  print('END')
+  
+  $ python3 err_logging.py
+  ERROR:root:division by zero
+  Traceback (most recent call last):
+    File "err_logging.py", line 13, in main
+      bar('0')
+    File "err_logging.py", line 9, in bar
+      return foo(s) * 2
+    File "err_logging.py", line 6, in foo
+      return 10 / int(s)
+  ZeroDivisionError: division by zero
+  END
+  ```
+
++ 如果想要抛出错误，可以使用python内置的错误类型，也可以 **自定义错误类型**
+
+  ```python
+  class FooError(ValueError):
+      pass
+  
+  def foo(s):
+      n = int(s)
+      if n==0:
+          raise FooError('invalid value: %s' % s)
+      return 10 / n
+  
+  foo('0')
+  ```
+
+  执行，可以最后跟踪到我们自己定义的错误：
+
+  ```python
+  $ python3 err_raise.py 
+  Traceback (most recent call last):
+    File "err_throw.py", line 11, in <module>
+      foo('0')
+    File "err_throw.py", line 8, in foo
+      raise FooError('invalid value: %s' % s)
+  __main__.FooError: invalid value: 0
+  ```
+
+  用 `try except` 语句捕捉到错误之后也可以使用 `raise` 来将这个错误重新抛出去
+
+  ```python
+  # err_reraise.py
+  
+  def foo(s):
+      n = int(s)
+      if n==0:
+          raise ValueError('invalid value: %s' % s)
+      return 10 / n
+  
+  def bar():
+      try:
+          foo('0')
+      except ValueError as e:
+          print('ValueError!')
+          raise
+  
+  bar()
+  ```
