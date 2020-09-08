@@ -967,3 +967,21 @@
 
 
 
+### datetime
+
++ ```python
+  from datetime import datetime
+  ```
+
+  `datetime` 是模块，这个模块还包含一个 `datetime` 类。如果仅导入 `import datetime` 则必须引用全名 `datetime.datetime` 。
+
++ `datetime.now()` 可以获取当前日期和时间
+
+  ```python
+  >>> from datetime import datetime
+  >>> now = datetime.now() # 获取当前datetime
+  >>> print(now)
+  2015-05-18 16:28:07.198690
+  >>> print(type(now))
+  <class 'datetime.datetime'>
+  ```
