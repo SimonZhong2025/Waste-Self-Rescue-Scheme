@@ -388,31 +388,163 @@
 
   这样绑定方法之后所有实例都可调用。
 
++ 如果想要限制某个class的实例能添加的属性，可以设置其中的 `__slots__` 属性，如下
 
+  ```python
+  class Student(object):
+      __slots__ = ('name', 'age') # 用tuple定义允许绑定的属性名称
+  ```
 
+  这样Student的实例就只能绑定 `score` 和 `age` 这两个属性，如果试图绑定其他属性则会抛出 `AttributeError` 错误。
 
+  + 另外使用 `__slots__` 的时候要注意其定义的属性只对当前类实例起作用，对继承的子类是不起作用的：
 
+    ```python
+    >>> class GraduateStudent(Student):
+    ...     pass
+    ...
+    >>> g = GraduateStudent()
+    >>> g.score = 9999
+    ```
 
+    除非在子类中也定义 `__slots__` ，这样子类实例允许定义的属性就是 **自身的`__slots__`加上父类的`__slots__`。** 。
 
++ `@property` 这个装饰器用来给类的属性来定义参数检查， **负责把一个方法变成属性调用** ，在 `def 属性(self)` 前面加上 `@property` 这个装饰器表示给这个属性设定一个 **getter** ，获取这个类的属性的时候自动调用这个函数。而设定了 **getter** 之后在后面 `def 属性(self, value)` 的前面加上 `@score.setter` 则说明这是一个对应的 `setter` ，当设定这个属性的值的时候即调用这个函数。如下
 
+  ```python
+  class Student(object):
+  
+      @property
+      def score(self):
+          return self._score
+  
+      @score.setter
+      def score(self, value):
+          if not isinstance(value, int):
+              raise ValueError('score must be an integer!')
+          if value < 0 or value > 100:
+              raise ValueError('score must between 0 ~ 100!')
+          self._score = value
+  ```
 
+  ```python
+  >>> s = Student()
+  >>> s.score = 60 # OK，实际转化为s.set_score(60)
+  >>> s.score # OK，实际转化为s.get_score()
+  60
+  >>> s.score = 9999
+  Traceback (most recent call last):
+    ...
+  ValueError: score must between 0 ~ 100!
+  ```
 
+  如果只定义 `getter` 方法而不定义 `setter` 方法说明这个属性是一个只读属性。
 
+  + 使用 **getter** 和 **setter** 的时候要注意
 
+    ```python
+    @property
+    def width(self):
+        return self._width
+    ```
 
+    要写 `self._属性` ，在属性前面要加上一个下划线，不然会报错。
 
++ 多重继承直接在类的定义中写上多个父类就行了
 
+  > 如果需要“混入”额外的功能，通过多重继承就可以实现，比如，让`Ostrich`除了继承自`Bird`外，再同时继承`Runnable`。这种设计通常称之为MixIn。
+  >
+  > 为了更好地看出继承关系，我们把`Runnable`和`Flyable`改为`RunnableMixIn`和`FlyableMixIn`。类似的，你还可以定义出肉食动物`CarnivorousMixIn`和植食动物`HerbivoresMixIn`，让某个动物同时拥有好几个MixIn：
+  >
+  > ```python
+  > class Dog(Mammal, RunnableMixIn, CarnivorousMixIn):
+  >     pass
+  > ```
 
++ `__str__()` 方法和 `__repr__()` 方法的区别是 `__str__()` 返回的是用户看到的字符串，而 `__repr__()` 返回程序开发者看到的字符串，换句话说 `__repr__()` 是为 **调试** 服务的。
 
+  一般要定义一个 `__str__()` 和一个 `__repr__()` ，但是一般这两个魔术方法的代码是一样的，所以有一种偷懒的方法
 
+  ```python
+  class Student(object):
+      def __init__(self, name):
+          self.name = name
+      def __str__(self):
+          return 'Student object (name=%s)' % self.name
+      __repr__ = __str__
+  ```
 
++ 如果一个类想被用于`for ... in`循环，类似list或tuple那样，就必须实现一个`__iter__()`方法，该方法返回一个迭代对象，然后，Python的for循环就会不断调用该迭代对象的`__next__()`方法拿到循环的下一个值，直到遇到`StopIteration`错误时退出循环。
 
+  如果想要写一个可以迭代的，用于产生斐波那契数列的类，代码如下
 
+  ```python
+  class Fib(object):
+      def __init__(self):
+          self.a, self.b = 0, 1 # 初始化两个计数器a，b
+  
+      def __iter__(self):
+          return self # 实例本身就是迭代对象，故返回自己
+  
+      def __next__(self):
+          self.a, self.b = self.b, self.a + self.b # 计算下一个值
+          if self.a > 100000: # 退出循环的条件
+              raise StopIteration()
+          return self.a # 返回下一个值
+  ```
 
+  将这个实例用于 `for` 循环，结果如下
 
+  ```python
+  >>> for n in Fib():
+  ...     print(n)
+  ...
+  1
+  1
+  2
+  3
+  5
+  ...
+  46368
+  75025
+  ```
 
++ 如果想要让一个通过 `__iter__()` 和 `__next__()` 达到能迭代的对象的实例能够像list那样可以 **通过下标来取得某一特定元素** ，可以设定其 `__getitem__()` 属性。如下：
 
+  ```python
+  class Fib(object):
+      def __getitem__(self, n):
+          a, b = 1, 1
+          for x in range(n):
+              a, b = b, a + b
+          return a
+  ```
 
+  而如果还想让这个函数支持像list一样的切片方法，则还要判断传入的类型。因为切片的时候传入的是一个 `slice` 对象而不像通过下标取元素一样是一个 `int` 对象。
+
+  ```python
+  class Fib(object):
+      def __getitem__(self, n):
+          if isinstance(n, int): # n是索引
+              a, b = 1, 1
+              for x in range(n):
+                  a, b = b, a + b
+              return a
+          if isinstance(n, slice): # n是切片
+              start = n.start
+              stop = n.stop
+              if start is None:
+                  start = 0
+              a, b = 1, 1
+              L = []
+              for x in range(stop):
+                  if x >= start:
+                      L.append(a)
+                  a, b = b, a + b
+              return L
+  ```
+
+  一个 `slice` 有 `start` 、`stop` 、`step` 属性，分别代表切片的开始、结尾、步长。
 
 
 
