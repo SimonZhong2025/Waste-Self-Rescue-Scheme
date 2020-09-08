@@ -212,3 +212,67 @@
 
   `reduce` 中，函数接受两个参数， `reduce` 将结果继续和序列的下一个元素进行累积运算。
 
++ 使用 `type` 可以获得某个目标变量的类型
+
++ `del` 可以删除一个变量
+
++ `filter` 返回的值是一个 `Iterator` ，如果想强迫其计算完所有结果需要用 `list` 取得其所有结果
+
++ `sorted(列表, key = 处理函数)` 将这个列表中的每个元素通过处理函数处理，然后将其进行排序。返回的列表中的所有元素是处理函数处理之前的元素。
+
+  + 如果要实现反向排列，可以传入第三个参数 `reverse = True`
+
++ **返回闭包时牢记一点：返回函数不要引用任何循环变量，或者后续会发生变化的变量。**
+
++ 如果在生成闭包的时候想要使用外面的变量，要声明这个变量不是局部变量，用 `nonlocal 变量` 来声明
+
++ `lambda` 匿名函数 `arg1, arg2, ... argn : 表达式` 返回值是表达式的值
+
++ 函数对象有一个 `__name__` 属性，可以拿到函数的名字
+
+
+
++ 装饰器
+
+  把`@log`放到`now()`函数的定义处，相当于执行了语句：
+
+  ```python
+  now = log(now)
+  ```
+
+  把 `@log('execute')` 放到函数的定义处，相当于执行了语句
+
+  ```python
+  now = log('execute')(now)
+  ```
+
+  这行代码的实际意义是先调用 `log('execute')` 返回一个函数（一个装饰器），然后将 `now` 作为参数传入这个函数中，将最终调用的值赋给 `now`
+
+  + 但通过装饰器返回的函数的 `__name__` 属性是装饰器的函数名，如果需要将返回的函数的名称设置为其原来的名称，不需要写 `wrapper.__name__ = func.__name__` 这种代码，只需要使用python内置的 `functools.wraps` 。像这样在 `wrapper` 前面加上一行 `@functools.wraps(func)`
+
+    ```python
+    import functools
+    
+    def log(func):
+        @functools.wraps(func)
+        def wrapper(*args, **kw):
+            print('call %s():' % func.__name__)
+            return func(*args, **kw)
+        return wrapper
+    ```
+
+    或者针对带参数的decorator：
+
+    ```python
+    import functools
+    
+    def log(text):
+        def decorator(func):
+            @functools.wraps(func)
+            def wrapper(*args, **kw):
+                print('%s %s():' % (text, func.__name__))
+                return func(*args, **kw)
+            return wrapper
+        return decorator
+    ```
+
