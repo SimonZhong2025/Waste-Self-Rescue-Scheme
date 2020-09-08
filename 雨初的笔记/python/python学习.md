@@ -546,5 +546,47 @@
 
   一个 `slice` 有 `start` 、`stop` 、`step` 属性，分别代表切片的开始、结尾、步长。
 
++ 如果没有找到一个实例的属性，会自动调用 `__getattr__()` 方法，已有的属性不会在 `__getattr__()` 中查找。如下：
 
+  ```python
+  class Student(object):
+  
+      def __getattr__(self, attr):
+  		if attr=='score':
+  			return 99
+          if attr=='age':
+              return lambda: 25
+          
+  >>> s.score
+  99
+  >>> s.age()
+  25
+  ```
 
+  如果想让class只响应特定的几个属性，我们要在没有找到相应属性的时候抛出 `AttributeError` 的错误。
+
+  ```python
+  class Student(object):
+  
+      def __getattr__(self, attr):
+          if attr=='age':
+              return lambda: 25
+          raise AttributeError('\'Student\' object has no attribute \'%s\'' % attr)
+  ```
+
++ 定义一个 `__call__()` 方法，可以直接对实例进行调用。
+
+  ```python
+  class Student(object):
+      def __init__(self, name):
+          self.name = name
+  
+      def __call__(self):
+          print('My name is %s.' % self.name)
+          
+  >>> s = Student('Michael')
+  >>> s() # self参数不要传入
+  My name is Michael.
+  ```
+
+  `__call__()` 中也可以传入参数，完全可以将其当作一个函数来进行调用。事实上在python中一个实例和一个函数也并没有什么本质上的区别。
