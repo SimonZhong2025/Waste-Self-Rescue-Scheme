@@ -630,7 +630,7 @@
 
   其中 **metaclass** 必须从 `type` 类派生出来，且这个 **metaclass** 中必须有 `__new__()` 方法。
 
-## 
+## 错误处理
 
 + 如果有一段代码可能会出错，可以用 `try` 去运行它。一旦这段代码执行出错，则后续代码不会继续执行，而是直接跳转到错误处理代码，即 `except` 代码块，如果执行完 `except` 之后后面还有 `finally` 语句块，则继续执行 `finally` 语句块。 **`finally` 代码块无论出现错误与否都会被执行。**
 
@@ -750,3 +750,93 @@
   
   bar()
   ```
+
+  这种使用方法非常常见，处理不了就将异常往上抛，抛到最顶层来对这个错误进行处理。
+
+  +  `raise` 语句如果不带参数，则会把当前错误原样抛出，而如果想要定义错误的类型，也可以在 `raise` 语句之后自定义抛出的错误。如下
+
+    ```python
+    try:
+        10 / 0
+    except ZeroDivisionError:
+        raise ValueError('input error!')
+    ```
+
+    但是绝对不能将一个错误转换为另一个毫不相关的错误。
+
++ python的 `assert` 的用法如下：`assert n != 0, 'n is zero!'`
+
+  如果想要在运行的时候关掉 `assert` 断言，那么可以在运行 `python` 的时候加上 `-O` 参数（注意其中是大写的O）
+
++ `logging` 可以指定记录信息的级别，有`debug`，`info`，`warning`，`error`等几个级别，通过如下方法设置
+
+  ```python
+  import logging
+  logging.basicConfig(level=logging.INFO)
+  ```
+
+  将 `level` 设置为 `logging.INFO` 之后则可以看到 `.info` 级别的输出，需要使用的时候代码如下
+
+  ```python
+  import logging
+  
+  s = '0'
+  n = int(s)
+  logging.info('n = %d' % n)
+  print(10 / n)
+  ```
+
++ 需要编写单元测试时可以使用python自带的 `unittest` 模块
+
+  ```python
+  import unittest
+  
+  from mydict import Dict
+  
+  class TestDict(unittest.TestCase):
+  
+      def test_init(self):
+          d = Dict(a=1, b='test')
+          self.assertEqual(d.a, 1)
+          self.assertEqual(d.b, 'test')
+          self.assertTrue(isinstance(d, dict))
+  
+      def test_key(self):
+          d = Dict()
+          d['key'] = 'value'
+          self.assertEqual(d.key, 'value')
+  
+      def test_attr(self):
+          d = Dict()
+          d.key = 'value'
+          self.assertTrue('key' in d)
+          self.assertEqual(d['key'], 'value')
+  
+      def test_keyerror(self):
+          d = Dict()
+          with self.assertRaises(KeyError):
+              value = d['empty']
+  
+      def test_attrerror(self):
+          d = Dict()
+          with self.assertRaises(AttributeError):
+              value = d.empty
+  ```
+
+  编写单元测试的时候，我们需要编写一个测试类，这个测试类继承于 `unittest.testCase` 。以 `test` 开头的方法就是测试方法，不以 `test` 开头的方法不被认为是测试方法，测试的时候不会执行。主要有如下的测试方法
+
+  ```python
+  self.assertRaises()
+  self.assertEqual()
+  self.assertTrue()
+  self.assertFalse()
+  ```
+
++ 写好单元测试之后需要开启测试只需要给main函数加上如下代码
+
+  ```python
+  if __name__ == '__main__':
+      unittest.main()
+  ```
+
+  或者也可以在命令行通过参数 `-m unittest` 来直接运行单元测试，这是推荐的做法，因为这样可以一次运行多个单元测试，并且，有很多工具可以自动来运行这些单元测试。
