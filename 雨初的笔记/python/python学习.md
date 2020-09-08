@@ -786,6 +786,8 @@
   print(10 / n)
   ```
 
+  ## 单元测试
+
 + 需要编写单元测试时可以使用python自带的 `unittest` 模块
 
   ```python
@@ -840,3 +842,128 @@
   ```
 
   或者也可以在命令行通过参数 `-m unittest` 来直接运行单元测试，这是推荐的做法，因为这样可以一次运行多个单元测试，并且，有很多工具可以自动来运行这些单元测试。
+
++ 在测试中写的`setUp()`和`tearDown()`方法会分别在测试启动和测试结束的时候被调用。这样可以防止在每个测试函数中写出重复的代码，比如连接数据库和断开与数据库的连接。
+
++ 编写文档测试的时候中间多余的输出可以用 `...` 表示
+
+  > 另外，当模块正常导入时，doctest不会被执行。只有在命令行直接运行时，才执行doctest。所以，不必担心doctest会在非测试环境下执行。
+
+  ## IO
+
++ 同步IO和异步IO的区别是CPU等不等IO
+
++ 由于文件读写都有可能产生 `IOError` ，为了无论对错都能正确关闭文件，可以使用 `try ... finally` 实现。无论是否打开成功都使用 `f.close()` 关闭文件。
+
++ 日常使用中并不需要使用 `try ... finally` 来防止文件打开出错的问题。使用 `with open(filepath, 'r') as f:` 就可以保证无论是否成功打开文件都会调用 `f.close()` 方法来关闭文件IO流。如下
+
+  ```python
+  with open('/path/to/file', 'r') as f:
+      print(f.read())
+  ```
+
+  `read(size)` 方法可以设定一次读取的字节的多少， `readline()` 可以每次读取一行的内容，使用 `readlines()` 可以一次读取所有内容并按行返回一个 `list` 。（如果是读取配置文件一般使用 `readlines()` 方法来读取）
+
++ 如果要读取非 `utf-8` 编码的文本文件，需要给 `open()` 函数传入 `encoding` 参数。例如如果需要读取GBK编码的文件
+
+  ```python
+  >>> f = open('/Users/michael/gbk.txt', 'r', encoding='gbk')
+  >>> f.read()
+  '测试'
+  ```
+
+  >遇到有些编码不规范的文件，你可能会遇到`UnicodeDecodeError`，因为在文本文件中可能夹杂了一些非法编码的字符。遇到这种情况，`open()`函数还接收一个`errors`参数，表示如果遇到编码错误后如何处理。最简单的方式是直接忽略：
+  >
+  >```python
+  >>>> f = open('/Users/michael/gbk.txt', 'r', encoding='gbk', errors='ignore')
+  >```
+
++ 在使用 `write` 来写文件的时候，务必要在结束的时候调用 `close()` 方法，只有调用了 `close()` 方法操作系统才会将等IO的时候缓存的数据全部写入磁盘中。因为 `write()` 方法写数据的时候总是要等到空闲的时候再慢慢写入，如果不在最后调用 `close()` 方法，甚至可能数据只写了一部分到硬盘中而剩下的丢失了。所以使用 `wirte()` 方法的时候也是使用 `with` 语句来打开比较保险。这样不会忘记使用 `close()` 而导致输出的数据不完整。
+
++ ```python
+  from io import StringIO
+  ```
+
+  `StringIO` 可以将内存中的字符串像读文件一样读取。这个是不是和 `sscanf` `sprintf` 有点像？
+
++ ```python
+  from io import BytesIO
+  ```
+
+  `StringIO` 操作的只能是 `str` ，如果要操作二进制数据，就需要使用 `BytesIO` 。
+
++ os中的 `uname()` 函数在 `windows` 上不提供。 `os` 模块的某些函数是跟操作系统相关的。
+
++ 合并路径的两部分时，要用其提供的 `os.path.join()` 函数，这样可以处理不同操作系统的路径分隔符，而 `os.path.split()` 也可以将路径拆分为最后级别的目录或文件名和前面的路径两部分。
+
+  ```python
+  >>> os.path.split('/Users/michael/testdir/file.txt')
+  ('/Users/michael/testdir', 'file.txt')
+  ```
+
+  `os.path.splitext()`可以直接让你得到文件扩展名，很多时候非常方便：
+
+  ```python
+  >>> os.path.splitext('/path/to/file.txt')
+  ('/path/to/file', '.txt')
+  ```
+
+  `os` 中没有提供用于复制文件的函数，但幸运的是`shutil`模块提供了`copyfile()`的函数，你还可以在`shutil`模块中找到很多实用函数，它们可以看做是`os`模块的补充。
+
+  最后看看如何利用Python的特性来过滤文件。比如我们要列出当前目录下的所有目录，只需要一行代码：
+
+  ```python
+  >>> [x for x in os.listdir('.') if os.path.isdir(x)]
+  ['.lein', '.local', '.m2', '.npm', '.ssh', '.Trash', '.vim', 'Applications', 'Desktop', ...]
+  ```
+
+  要列出所有的`.py`文件，也只需一行代码：
+
+  ```python
+  >>> [x for x in os.listdir('.') if os.path.isfile(x) and os.path.splitext(x)[1]=='.py']
+  ['apis.py', 'config.py', 'models.py', 'pymonitor.py', 'test_db.py', 'urls.py', 'wsgiapp.py']
+  ```
+
++ `serialization，marshalling，flattening` 都是序列化操作，在Python中叫 `pickling`
+
++ python提供了 `pickle` 模块来实现序列化。
+
+  ```python
+  with open('dump.txt', 'wb') as f:
+  	pickle.dump(d, f)
+  ```
+
+  `pickle.dumps(d)` 将对象封装后作为 `bytes` 类型直接返回，而不是将其写入到文件。
+
+  `pickle.dump(d, f)` 将对象封装后写入已经打开的 `f` 对象中。
+
++ 要将python对象序列化为 `json` ，可以使用python内置的json库
+
+  ```python
+  import json
+  ```
+
+  如果想要把一个自定义的类序列化为json，需要在序列化的时候传入一个能够用来将该对象转换为能被序列化的对象的函数。如下：
+
+  ```python
+  def student2dict(std):
+      return {
+          'name': std.name,
+          'age': std.age,
+          'score': std.score
+      }
+  
+  >>> print(json.dumps(s, default=student2dict))
+  {"age": 20, "name": "Bob", "score": 88}
+  ```
+
+  一般没有定义 `__slots__` 的class都有一个 `__dict__` 属性（注意这是一个属性而不是一个方法），如果我们想要序列化一个没有 `__slots__` 属性的class，也可以偷点懒利用这个属性
+
+  ```python
+  print(json.dumps(s, default=lambda obj: obj.__dict__))
+  ```
+
+  这样就不用另外写一个用来将类转换为能够序列化的对象的函数了。
+
+
+
