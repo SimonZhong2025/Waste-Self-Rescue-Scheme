@@ -276,3 +276,81 @@
         return decorator
     ```
 
++ `functools.partial` 是用来给我们创建一个偏函数的，不用我们再像这样
+
+  ```python
+  def int2(x, base=2):
+      return int(x, base)
+  ```
+
+  写一个偏函数，而是可以直接使用 `functools.partial` 来自动生成一个偏函数
+
+  ```python
+  >>> import functools
+  >>> int2 = functools.partial(int, base=2)
+  >>> int2('1000000')
+  64
+  >>> int2('1010101')
+  85
+  ```
+
+  + 而如果像这样 `max2 = functools.partial(max, 10)` 使用偏函数，则在调用 `max2` 这个函数的时候会将 `10` 自动添加到调用 `max` 函数的最左边的参数，如下
+
+    ```python
+    max2 = functools.partial(max, 10)
+    max2(5, 6, 7)
+    # 等价于
+    args = (10, 5, 6, 7)
+    max(*args)
+    ```
+
++ 任何模块代码的第一个字符串都被视为模块的文档注释。
+
+  ```python
+  #!/usr/bin/env python3
+  # -*- coding: utf-8 -*-
+  
+  ' a test module '
+  
+  __author__ = 'Michael Liao'
+  
+  import sys
+  
+  def test():
+      args = sys.argv
+      if len(args)==1:
+          print('Hello, world!')
+      elif len(args)==2:
+          print('Hello, %s!' % args[1])
+      else:
+          print('Too many arguments!')
+  
+  if __name__=='__main__':
+      test()
+  ```
+
+  这段代码中的 `'a test module'` 便可被视为这个模块的文档注释
+
+
+
+## OOP
+
++ 可以自由地给一个实例变量绑定属性，比如，给实例`bart`绑定一个`name`属性：
+
+  ```python
+  >>> bart.name = 'Bart Simpson'
+  >>> bart.name
+  'Bart Simpson'
+  ```
+
++ `__init__` 方法的第一个参数永远是 `self` ，表示创建的示例本身。在 `__init__` 中将各种属性绑定到 `self` 可以给创建的示例本身绑定属性。
+
++ 如果有了 `__init__` 方法，在创建示例的时候就不能传入空的参数了，必须传入和 `__init__` 方法匹配的参数（但是 `self` 不需要传）
+
++ `python` 的类里面的私有变量要在变量名前面加上两个下划线。如 `__name` ，这样就无法在类外面访问这个变量。
+
++ `isinstance` 判断的时候，一个对象既是它的父类，也是它所属的类的对象。
+
++ 对于C和JAVA这种静态语言，传进去的类型必须是 `Animal` 类型或者它的子类，不过像python这种动态语言，我们只要保证传入的对象有一个 `run()` 方法就可以了。
+
+  >这就是动态语言的“鸭子类型”，它并不要求严格的继承体系，一个对象只要“看起来像鸭子，走起路来像鸭子”，那它就可以被看做是鸭子。
