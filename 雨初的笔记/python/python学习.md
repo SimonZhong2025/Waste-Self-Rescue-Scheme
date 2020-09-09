@@ -965,7 +965,7 @@
 
   这样就不用另外写一个用来将类转换为能够序列化的对象的函数了。
 
-
+## 常用内建模块
 
 ### datetime
 
@@ -985,3 +985,190 @@
   >>> print(type(now))
   <class 'datetime.datetime'>
   ```
+
++ 1970年1月1日0：0：0之前的时间的UNIX时间是一个负数
+
++ 如果需要获取某个时间的UNIX时间戳，只需要对这个 `datetime` 对象调用 `.timestamp()` 方法。
+
+  > 注意Python的timestamp是一个浮点数，整数位表示秒。
+  >
+  > 某些编程语言（如Java和JavaScript）的timestamp使用整数表示毫秒数，这种情况下只需要把timestamp除以1000就得到Python的浮点表示方法。
+
++ `//` 是向下取整的
+
++ 如果要将某一个  `timedate` 对象的时区转换为另一个时区，可以使用 `timedate对象.replace(tzone = 一个timezone对象)` 来达到目的。
+
+### collections
+
++ `namedtuple`
+
+  + `namedtuple`是一个函数，它用来创建一个自定义的`tuple`对象，并且规定了`tuple`元素的个数，并可以用属性而不是索引来引用`tuple`的某个元素。如下
+
+    ```python
+    >>> from collections import namedtuple
+    >>> Point = namedtuple('Point', ['x', 'y'])
+    >>> p = Point(1, 2)
+    >>> p.x
+    1
+    >>> p.y
+    2
+    ```
+
+    >`collections.namedtuple(typename, field_names, *, rename=False, defaults=None, module=None)`
+    >
+    >*field_names* 是一个像 `[‘x’, ‘y’]` 一样的字符串序列。另外 *field_names* 可以是一个纯字符串，用空白或逗号分隔开元素名，比如 `'x y'` 或者 `'x, y'` 。
+    >
+    >如果 *rename* 为真， 无效字段名会自动转换成位置名。比如 `['abc', 'def', 'ghi', 'abc']` 转换成 `['abc', '_1', 'ghi', '_3']` ， 消除关键词 `def` 和重复字段名 `abc` 。
+
+### base64
+
++ 如果要编码的二进制数据不是3的倍数，最后会剩下1个或2个字节怎么办？Base64用`\x00`字节在末尾补足后，再在编码的末尾加上1个或2个`=`号，表示补了多少字节，解码的时候，会自动去掉。
+
+### hashlib
+
++ 计算MD5的代码如下
+
+  ```python
+  import hashlib
+  
+  md5 = hashlib.md5()
+  md5.update('how to use md5 in python hashlib?'.encode('utf-8'))
+  print(md5.hexdigest())
+  # 结果如下d26a53750bc40b38b65a520292f69306
+  ```
+
+  如果数据量很大，可以分块多次调用 `update()` ，最后计算的结果是一样的
+
+  ```python
+  md5 = hashlib.md5()
+  md5.update('how to use md5 in '.encode('utf-8'))
+  md5.update('python hashlib?'.encode('utf-8'))
+  print(md5.hexdigest())
+  ```
+
+  如果想要使用另外一种摘要算法 `sha1` ，只要变为 `sha1 = hashlib.sha1()` 即可
+
+### hmac
+
++ 使用hmac的时候需要提供原始的消息、给消息加盐的随机 `key` 和需要使用的哈希算法。如果需要使用哈希算法，代码如下
+
+  ```python
+  >>> import hmac
+  >>> message = b'Hello, world!'
+  >>> key = b'secret'
+  >>> h = hmac.new(key, message, digestmod='MD5')
+  >>> # 如果消息很长，可以多次调用h.update(msg)
+  >>> h.hexdigest()
+  'fa4ee7d173f2d97ee79022d1a7355bcf'
+  ```
+
+### itertools
+
+```python
+ import itertools
+```
+
+- ```python
+  itertools.count(start=0, step=1)
+  ```
+
+  `count()` 会创建一个迭代器，从 **start** 值开始，返回均匀间隔的值
+
+  > 常用于 [`map()`](https://docs.python.org/zh-cn/3/library/functions.html#map) 中的实参来生成连续的数据点。此外，还用于 [`zip()`](https://docs.python.org/zh-cn/3/library/functions.html#zip) 来添加序列号
+
+  ```python
+  >>> import itertools
+  >>> natuals = itertools.count(1)
+  >>> for n in natuals:
+  ...     print(n)
+  ...
+  1
+  2
+  3
+  ...
+  ```
+
+- `cycle()` 会把传入的一个序列无限重复下去
+
+  ```python
+  >>> import itertools
+  >>> cs = itertools.cycle('ABC') # 注意字符串也是序列的一种
+  >>> for c in cs:
+  ...     print(c)
+  ...
+  'A'
+  'B'
+  'C'
+  'A'
+  'B'
+  'C'
+  ...
+  ```
+
+- `repeat()` 同样可以让一个元素无限重复下去，但是和 `cycle()` 不同的是如果提供第二个参数就可以限定重复的次数。
+
+  ```python
+  >>> ns = itertools.repeat('A', 3)
+  >>> for n in ns:
+  ...     print(n)
+  ...
+  A
+  A
+  A
+  ```
+
+- 无限序列虽然可以无限迭代下去，但是通常我们会通过`takewhile()`等函数根据条件判断来截取出一个有限的序列：
+
+  ```python
+  >>> natuals = itertools.count(1)
+  >>> ns = itertools.takewhile(lambda x: x <= 10, natuals)
+  >>> list(ns)
+  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  ```
+
+- `chain()` 可以把一组迭代对象串联起来，并形成一个更大的迭代器
+
+  ```python
+  >>> for c in itertools.chain('ABC', 'XYZ'):
+  ...     print(c)
+  # 迭代效果：'A' 'B' 'C' 'X' 'Y' 'Z'
+  ```
+
+- `groupby()`把迭代器中相邻的重复元素挑出来放在一起：
+
+  ```python
+  >>> for key, group in itertools.groupby('AAABBBCCAAA'):
+  ...     print(key, list(group))
+  ...
+  A ['A', 'A', 'A']
+  B ['B', 'B', 'B']
+  C ['C', 'C']
+  A ['A', 'A', 'A']
+  ```
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
