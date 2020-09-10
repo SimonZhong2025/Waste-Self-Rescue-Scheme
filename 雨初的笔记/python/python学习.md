@@ -1146,8 +1146,122 @@
   A ['A', 'A', 'A']
   ```
 
+  我们还可以设定挑选的规则，比如可以设定大小写不敏感，大小写字母都分在同一个组里面
+
+  ```python
+  >>> for key, group in itertools.groupby('AaaBBbcCAAa', lambda c: c.upper()):
+  ...     print(key, list(group))
+  ...
+  A ['A', 'a', 'a']
+  B ['B', 'B', 'b']
+  C ['c', 'C']
+  A ['A', 'A', 'a']
+  ```
+
   
 
+### contextlib
+
++ 并不是只有文件操作的时候才能用 `with .. as ..` ，事实上对于任何对象，只要正确实现了上下文管理，都可以使用 `with` 。
+
+  + 上下文管理是通过`__enter__`和`__exit__`这两个方法实现的
+
+    ```python
+    class Query(object):
+    
+        def __init__(self, name):
+            self.name = name
+    
+        def __enter__(self):
+            print('Begin')
+            return self
+        
+        def __exit__(self, exc_type, exc_value, traceback):
+            if exc_type:
+                print('Error')
+            else:
+                print('End')
+        
+        def query(self):
+            print('Query info about %s...' % self.name)
+    ```
+
++ `__enter__()` 和 `__exit__()` 仍然很繁琐，因此可以使用 `@contextmanager` 这个装饰器来简化代码。
+
++ `@contextmanager`这个decorator接受一个generator，用`yield`语句把`with ... as var`把变量输出出去，然后，`with`语句就可以正常地工作了：
+
+  ```python
+  from contextlib import contextmanager
+  
+  class Query(object):
+  
+      def __init__(self, name):
+          self.name = name
+  
+      def query(self):
+          print('Query info about %s...' % self.name)
+  
+  @contextmanager
+  def create_query(name):
+      print('Begin')
+      q = Query(name)
+      yield q
+      print('End')
+  ```
+
+  ```python
+  with create_query('Bob') as q:
+      q.query()
+  ```
+
+  如果我们想在某段代码执行前后自动执行特定代码，也可以用 `@contextmanager` 这个装饰器实现。如下
+
+  ```python
+  @contextmanager
+  def tag(name):
+      print("<%s>" % name)
+      yield
+      print("</%s>" % name)
+  
+  with tag("h1"):
+      print("hello")
+      print("world")
+  
+      
+  # 输出如下
+  <h1>
+  hello
+  world
+  </h1>
+  ```
+
+  代码的执行顺序是：
+
+  1. `with`语句首先执行`yield`之前的语句，因此打印出`<h1>`；
+  2. `yield`调用会执行`with`语句内部的所有语句，因此打印出`hello`和`world`；
+  3. 最后执行`yield`之后的语句，打印出`</h1>`。
+
+  因此，`@contextmanager`让我们通过编写generator来简化上下文管理。
+
+
+
+## 第三方库
+
+### chardet
+
++ ```python
+  >>> data = '离离原上草，一岁一枯荣'.encode('gbk')
+  >>> chardet.detect(data)
+  {'encoding': 'GB2312', 'confidence': 0.7407407407407407, 'language': 'Chinese'}
+  ```
+
+  `chardet.detect(data)` 可以获取 `data` 的字符编码、检测正确概率和判断其语言。不过 `language` 字段对应的可能是空。
+
+  > `gbk` 字符集是 `gb2312` 字符集的超集，两者是同一种编码
+
+### psutil
+
++ `psutil.test()` 可以模拟出 `ps` 命令的效果
 
 
 
@@ -1155,16 +1269,9 @@
 
 
 
+## 其他
 
-
-
-
-
-
-
-
-
-
++ `try ... except ... else`
 
 
 
