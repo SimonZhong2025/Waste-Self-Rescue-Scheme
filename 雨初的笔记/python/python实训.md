@@ -50,4 +50,9 @@
 + 设置查找字典的默认值
 
   ![image-20200909143924376](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/image-20200909143924376.png)
+  
 + `字典.get(键, 默认值)` 如果没有找到这个键，则返回默认值
+
+## day4
+
+![](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/20200910105155.png)
