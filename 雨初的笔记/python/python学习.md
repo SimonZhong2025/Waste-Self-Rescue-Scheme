@@ -1273,7 +1273,8 @@
 
 + `try ... except ... else`
 
-
++ `python -m json.tool demo.json`
++ ![image-20200911082142534](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/image-20200911082142534.png)
 
 
 

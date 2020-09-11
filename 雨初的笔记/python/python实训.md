@@ -56,3 +56,19 @@
 ## day4
 
 ![](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/20200910105155.png)
+
++ `math.pi` 是圆周率
++ `%f` 默认%后6位
++ ![image-20200910144957525](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/image-20200910144957525.png)
+
++ 判断字段是否为全英文 `字符串.isalpha()` ，转大写 `字符串.upper()`
++ `time.localtime()` 可以得到一个 `struct_time` 元组
++ `time.mktime(struct_time元组)` 可以得到一个时间戳 () 
++ `time.sleep()` 可以睡眠
++ 使用 `datetime.timedelta()` 用来前后移动时间
++ ![image-20200910161343727](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/image-20200910161343727.png)
+
+## day5
+
++ 定向捕获异常之后还可以通过 `except:` 来捕获未知的错误。
++ 如果使用 `else` 必须放在所有 `except` 之后，如果没有错误发生那么 `else` 中的代码会被执行
