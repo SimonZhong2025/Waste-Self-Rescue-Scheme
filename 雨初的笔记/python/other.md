@@ -5,3 +5,4 @@
 ![image-20200910111435664](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/image-20200910111435664.png)
 
 + pycharm里面改名用 `shift + f6`
++ 如果一个元组只有一个元素，最后要加上 `,`

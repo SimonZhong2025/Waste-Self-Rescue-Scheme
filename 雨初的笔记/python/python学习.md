@@ -1263,7 +1263,7 @@
 
 + `psutil.test()` 可以模拟出 `ps` 命令的效果
 
-
+  
 
 
 
@@ -1276,7 +1276,7 @@
 + `python -m json.tool demo.json`
 + ![image-20200911082142534](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/image-20200911082142534.png)
 
++ 如果需要禁止函数修改列表，可以通过 `function_name[list_name[:]]` 来达到目的，这样函数所做的任何修改都只影响副本而不会影响原件。
 
-
-
++ 要删除一个列表中特定下标的元素可以使用 `del a[下标]`
 

@@ -72,3 +72,24 @@
 
 + 定向捕获异常之后还可以通过 `except:` 来捕获未知的错误。
 + 如果使用 `else` 必须放在所有 `except` 之后，如果没有错误发生那么 `else` 中的代码会被执行
+
++ ```python
+  import traceback
+  try:
+      ...
+  except () as e:
+      traceback.print_exc()
+      print(e)
+  ```
+
++ 记录程序运行时间
+
+  ```python
+  print((time2 - time1).totalseconds())
+  ```
+
++ ![image-20200911110437781](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/image-20200911110437781.png)
+
++ `r` 只读，只能打开已存在的文件，指针在开头
++ 使用 `fp.seek()` 的时候只有在打开模式中有 `b` 的时候才能将第二个参数设置为 `0` 之外的值。
++ `f.runcate(path, length)` 可以截断 `path` 对应的文件，使其最大为 `length` 字节。如果不指定 `length` 则从文件指针
