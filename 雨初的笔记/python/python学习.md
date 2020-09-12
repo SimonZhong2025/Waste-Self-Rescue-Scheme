@@ -1280,3 +1280,14 @@
 
 + 要删除一个列表中特定下标的元素可以使用 `del a[下标]`
 
++ 空字符串是 `True`
+
++ `random.choice()` 从一个list中随机挑选元素
+
++ 将 logging 的 error 方法的 `exc_info` 参数设置为 `True` 可以打印出 Traceback 错误堆栈信息。
+
+  ```python
+  logging.error('error occurred while scraping %s', url, exc_info=True)
+  ```
+
+  

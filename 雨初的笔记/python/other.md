@@ -6,3 +6,4 @@
 
 + pycharm里面改名用 `shift + f6`
 + 如果一个元组只有一个元素，最后要加上 `,`
++ `alt + shift + e` 在pycharm中运行单行代码
