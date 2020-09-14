@@ -98,3 +98,7 @@
 + `f.runcate(path, length)` 可以截断 `path` 对应的文件，使其最大为 `length` 字节。如果不指定 `length` 则从文件指针
 
 + ![image-20200912135700854](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/image-20200912135700854.png)
+
+## day6
+
++ 可以通过 `._类名__私有变量名` 访问私有变量
