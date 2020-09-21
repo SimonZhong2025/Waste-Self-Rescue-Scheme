@@ -34,9 +34,10 @@ do0start:
 s0:
 	mov al,[si]
 	mov es:[di],al
+	mov byte ptr es:[di+1],11000010b
 	inc si
 	add di,2
-	loop s
+	loop s0
 	
 	mov ah,4ch
 	int 21h
