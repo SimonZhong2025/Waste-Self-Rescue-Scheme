@@ -71,3 +71,5 @@
   ![image-20200828111413743](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/image-20200828111413743.png)
 
 + 改写函数里面的硬编码的时候不要在函数头下断点，会改不了。
+
++ `case` 里面写些什么代码最好另起一个函数，不然在 `case` 里面写代码初始化变量的时候会出现问题。
