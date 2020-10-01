@@ -91,10 +91,17 @@
 
 + `GetFullPathName` 可以获取某个文件的全路径。
 
-+ 通过添加 `#pragma strict_gs_check(on)` 可以对任意类型的函数添加 `security cookie`  。如下
++ 通过添加 `#pragma strict_gs_check(on)` 可以对任意类型的函数添加 `security cookie`  。
 
-  ```cpp
-  
-  ```
++ ![image-20200926200404069](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/image-20200926200404069.png)
 
-  
+  ​	![image-20200926200943226](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/image-20200926200943226.png)
+
++ `command prompt` 
+
+  ![image-20200926204750505](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/image-20200926204750505.png)
+
++ safeSEH
+
+  + 检查异常处理链是否位于当前程序的栈中，如果不在，终止异常处理函数的调用
+  + 检查异常处理函数指针是否指向当前程序的栈中，如果指向当前栈中，终止对异常处理程序的调用。

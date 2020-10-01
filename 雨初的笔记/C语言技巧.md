@@ -73,3 +73,11 @@
 + 改写函数里面的硬编码的时候不要在函数头下断点，会改不了。
 
 + `case` 里面写些什么代码最好另起一个函数，不然在 `case` 里面写代码初始化变量的时候会出现问题。
+
++ `atoi` 舍弃任何空白符，直至找到首个非空白符，然后接收尽可能多的字符以组成合法的整数表示，并转换之为整数值。
+
++ `ssize_t read(int fd, void * buf, size_t count);` 这个函数在 `#include <unistd.h>   ` 头文件里面，
+
+  **函数说明：read()会把参数fd 所指的文件传送count 个字节到buf 指针所指的内存中. 若参数count 为0, 则read()不会有作用并返回0. 返回值为实际读取到的字节数, 如果返回0, 表示已到达文件尾或是无可读取的数据,此外文件读写位置会随读取到的字节移动.**
+
+  In Linux machine and C language , the Linux Descriptors have a value **0** for **STDIN(Standard Input)** *,* **1** for **STDOUT(Standard Output)**, **2** for **STDERR(Standard Error)**
