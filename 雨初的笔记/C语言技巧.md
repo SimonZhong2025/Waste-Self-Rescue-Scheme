@@ -81,3 +81,5 @@
   **函数说明：read()会把参数fd 所指的文件传送count 个字节到buf 指针所指的内存中. 若参数count 为0, 则read()不会有作用并返回0. 返回值为实际读取到的字节数, 如果返回0, 表示已到达文件尾或是无可读取的数据,此外文件读写位置会随读取到的字节移动.**
 
   In Linux machine and C language , the Linux Descriptors have a value **0** for **STDIN(Standard Input)** *,* **1** for **STDOUT(Standard Output)**, **2** for **STDERR(Standard Error)**
+  
++ 在C++里面，一个负数模上一个正数的结果还是负数，如 `-10 % 3 == -1` ，和数学上的定义不太一样，要注意区别。
