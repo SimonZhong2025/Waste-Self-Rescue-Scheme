@@ -1,6 +1,6 @@
 ## if-else if-else
 
-> 使用 if else if else
+> 使用 if-else if-else语句
 >
 > 输入小明的分数，输出其分数对应的类型
 >
@@ -25,6 +25,15 @@ http://oj.ncutea.com:2080/problem/998
 http://oj.ncutea.com:2080/problem/997
 
 ## for
+
+>输入两个数n和m，输出n到m所有数的和
+>
+>样例输入：
+>	1 100
+>样例输出：
+>	5050
+
+http://oj.ncutea.com:2080/problem/994
 
 >使用for循环
 >思考：1.有四个数，相加等于45，分别去+2 -2 *2 /2得到的结果相等，求这四个数
@@ -64,4 +73,4 @@ http://oj.ncutea.com:2080/problem/996
 
 + 杭电OJ2000~2100题
 
-  http://acm.hdu.edu.cn/listproblem.php?vol=11
+  ### http://acm.hdu.edu.cn/listproblem.php?vol=11
