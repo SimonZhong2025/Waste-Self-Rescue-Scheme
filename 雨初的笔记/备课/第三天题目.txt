@@ -1,0 +1,5 @@
+交换数值 https://www.acwing.com/problem/content/813/
+
+连续正整数的和 http://oj.ncutea.com/problem/lanqiao-1220
+
+二分模板题（数的范围）https://www.acwing.com/problem/content/791/
