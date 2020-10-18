@@ -51,3 +51,7 @@
 + ![image-20200826170343212](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed@master/image-20200826170343212.png)
 
   交叉引用，可以列出所有使用这个函数的地方。
+  
++ 在IDA里面的函数列表按 `ctrl + f` 可以按照函数名找函数。
+
++ IDA中按 `G` 可以跳转到需要的地址。
