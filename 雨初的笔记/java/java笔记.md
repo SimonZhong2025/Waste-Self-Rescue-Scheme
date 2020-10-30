@@ -29,3 +29,56 @@
 + 把一个方法声明为`abstract`，表示它是一个抽象方法，本身没有实现任何方法语句。因为这个抽象方法本身是无法执行的，所以，`Person`类也无法被实例化。编译器会告诉我们，无法编译`Person`类，因为它包含抽象方法。
 
 + 实际上，确切地说，`private`访问权限被限定在`class`的内部，而且与方法声明顺序*无关*。推荐把`private`方法放到后面，因为`public`方法定义了类对外提供的功能，阅读代码的时候，应该先关注`public`方法：
+
+
+
++ 一个文件里面只能有一个公共类
+
++ `JRE` 就是 `java runtime environment`
++ `byte` 是一个字节
++ `long` 是 **8个字节** 。
++ `for (int x : a)` 这样也可以修改变量，和 `c++11` 里面的不太一样。
++ `final int` 和 **C++** 里面的 `const int` 差不多。
++ 二维数组要用 `.deeptostring` 才能得到
+
+
+
+
+
+### 字符串
+
+![image-20201030152728286](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20201030152728286.png)
+
++ `.substring` 方法左闭右开
+
++ ![image-20201030153049630](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20201030153049630.png)
+
+  比较值而不是比较这两个字符串指向是否是一个地址。
+
++ `StringBuilder` 是可以写的。但不支持多线程。 `StringBuffer` 则可以支持多线程。
+
++ ![image-20201030154543275](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20201030154543275.png)
+
++ `StringBuffer` 只能用 `append` 往后加数据。
+
+
+
+### 面向对象
+
+![image-20201030192004773](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20201030192004773.png)
+
++ 在类里面可以赋初始值
+
++ 不像C++，在java中每个数据成员前面都要加上其访问限制。
+
++ JAVA中也有类似C++析构函数的功能
+
+  ![image-20201030193130768](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20201030193130768.png)
+
++ ![image-20201030193111288](C:\Users\雨初\AppData\Roaming\Typora\typora-user-images\image-20201030193111288.png)
+
++ 在java中生成对象必须是用 `new` 。
+
+  ![image-20201030200604204](C:\Users\雨初\AppData\Roaming\Typora\typora-user-images\image-20201030200604204.png)
+
+  这样是不行的。
