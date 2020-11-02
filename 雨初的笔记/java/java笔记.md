@@ -82,3 +82,17 @@
   ![image-20201030200604204](C:\Users\雨初\AppData\Roaming\Typora\typora-user-images\image-20201030200604204.png)
 
   这样是不行的。
+  
++ ![image-20201030201441666](C:\Users\雨初\AppData\Roaming\Typora\typora-user-images\image-20201030201441666.png)
+
++ 内部类不能有静态成员。
+
++ 静态类只能访问外部类的静态成员。
+
++ 外部类可以访问内部类的私有成员。
+
++ 接口只包含**常量和抽象方法**
+
+##### 反射
+
+![image-20201030210459792](C:\Users\雨初\AppData\Roaming\Typora\typora-user-images\image-20201030210459792.png)
