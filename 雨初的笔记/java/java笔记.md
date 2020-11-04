@@ -93,6 +93,9 @@
 
 + 接口只包含**常量和抽象方法**
 
++ `abstract` 类中也可以有非 `abstract` 方法，接口不可以。
+
 ##### 反射
 
 ![image-20201030210459792](C:\Users\雨初\AppData\Roaming\Typora\typora-user-images\image-20201030210459792.png)
+
