@@ -93,6 +93,9 @@
 
 + 接口只包含**常量和抽象方法**
 
-##### 反射
++ `abstract` 类中也可以有非 `abstract` 方法，接口不可以。
+
++ 接口中默认的访问控制符都是**public**
 
 ![image-20201030210459792](C:\Users\雨初\AppData\Roaming\Typora\typora-user-images\image-20201030210459792.png)
+
