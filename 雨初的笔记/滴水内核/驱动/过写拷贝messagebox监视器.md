@@ -15,6 +15,14 @@
 + 他这里的思路是先构造一个中断门，然后把 `MessageBox` 前4位patch为 `int XX` ，这样可以直接进到中断，然后就可以记录调用
 
   ![image-20210120164225356](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20210120164225356.png)
+  
++ 不能对一个 `PVOID` 解引用，要转为 `PULONG` 再解引用。
+
++ `C030000` 就是PDE的地址
+
++ ![image-20210123122320471](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20210123122320471.png)
+
+  最后一个参数最先入栈
 
 
 
@@ -26,6 +34,8 @@
 + [ ] 修改PTE/改VAD树二选一
 + [ ] 0环3环通信
 + [ ] 遍历kernel32，插入shellcode
++ [ ] 把PTE和PDE传进去
++ [ ] 不仅要修改RW，还要修改US
 
 
 
@@ -34,4 +44,15 @@
 ## 问题
 
 + 
+
+
+
+
+
+
+
+
+
+
+
 
