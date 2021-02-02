@@ -13,7 +13,7 @@
   }
   ```
 
-  首先通过 `fs:[0x124]` 找到指向 `KTHREAD` 的指针
+  首先通过 `fs:[0x124]` 找到指向 `KTHREAD` 的指针（在零环fs指向 `KPCR` 结构体）
 
   ![image-20210201174540485](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20210201174700221.png)
 
@@ -22,3 +22,8 @@
   ![image-20210201174700221](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20210201174700221.png)
 
   因此在获取指向 `KTHREAD` 的指针后 `[eax+0x220]` 即为当前进程 `EPROCESS` 的指针。
+
++ 
+
+### 线程结构体
+
