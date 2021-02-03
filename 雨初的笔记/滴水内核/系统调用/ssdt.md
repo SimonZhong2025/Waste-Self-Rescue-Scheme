@@ -6,4 +6,5 @@
 
 + ![image-20210202163211486](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20210202163211486.png)
 
-  调用 `Messagebox` 之后会变成一个 `gui` 进程，然后 `e0` 指向的地方会变成有 `shadow` 那个？
+  调用 `Messagebox` 之后会变成一个 `gui` 线程（or进程？上课好像说的是进程），然后 `e0` 指向的地方会变成有 `shadow` 那个？
+
