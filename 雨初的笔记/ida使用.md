@@ -65,3 +65,9 @@
 + `alt + t` 全文搜索。
 
 + 按 `t` 选择结构体偏移。
+
++ 结构体试图， `edit` ，添加结构体，可以添加 `standard structure` 。
+
+  ![image-20210204133525746](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20210204133525746.png)
+
++ 
