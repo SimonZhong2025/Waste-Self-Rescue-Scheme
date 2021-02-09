@@ -6,10 +6,12 @@ Created on Tue Feb  9 12:34:15 2021
 """
 
 import turtle
+
 def drawLine(draw):
     turtle.pendown() if draw else turtle.penup()
     turtle.fd(40)
     turtle.right(90)
+    
 def drawDigit(digit):
     drawLine(True) if digit in [2,3,4,5,6,8,9] else drawLine(False)
     drawLine(True) if digit in [0,1,3,4,5,6,7,8,9] else drawLine(False)
@@ -22,9 +24,11 @@ def drawDigit(digit):
     turtle.left(180)
     turtle.penup()
     turtle.fd(20)
+    
 def drawDate(date):
     for i in date:
         drawDigit(eval(i))
+        
 def main():
     turtle.setup(800,350,200,200)
     turtle.penup()
@@ -33,5 +37,7 @@ def main():
     drawDate('20210209')
     turtle.hihdeturtle()
     turtle.done()
+    
 main()
+
     
