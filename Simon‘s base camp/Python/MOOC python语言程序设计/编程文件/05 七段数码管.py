@@ -11,7 +11,7 @@ import time
 def drawLine(draw):
     t.penup()
     t.fd(10)
-    t.pendown() if draw else turtle.penup()
+    t.pendown() if draw else t.penup()
     t.fd(40)
     t.penup()
     t.fd(10)
