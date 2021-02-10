@@ -5,11 +5,15 @@ Created on Tue Feb  9 12:34:15 2021
 @author: Zhong
 """
 
-import turtle
+import turtle, time
 
 def drawLine(draw):
+    turtle.penup()
+    turtle.fd(10)
     turtle.pendown() if draw else turtle.penup()
     turtle.fd(40)
+    turtle.penup()
+    turtle.fd(10)
     turtle.right(90)
     
 def drawDigit(digit):
@@ -26,18 +30,31 @@ def drawDigit(digit):
     turtle.fd(20)
     
 def drawDate(date):
+    turtle.pencolor("red")
     for i in date:
-        drawDigit(eval(i))
+        if  i == '-':
+            turtle.pencolor("green")
+            turtle.write("年",font=("Arial", 18, "normal"))
+            turtle.fd(40)
+        elif i == '=':
+            turtle.write("月",font=("Arial", 18, "normal"))
+            turtle.fd(40)
+        elif i == '+':            
+            turtle.write("日",font=("Arial", 18, "normal"))
+            turtle.fd(40)
+        else:
+            drawDigit(eval(i))
         
 def main():
     turtle.setup(800,350,200,200)
     turtle.penup()
     turtle.fd(-300)
     turtle.pensize(5)
-    drawDate('20210209')
+    drawDate(time.strftime("%Y-%m=%d+",time.gmtime()))
     turtle.hihdeturtle()
     turtle.done()
     
 main()
+
 
     
