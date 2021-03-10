@@ -30,12 +30,12 @@ VOID ShowPaint(stPlayerInfo stMe, stPlayerInfo stTarget, HDC hDc, DWORD dwWindwM
 	dy = stTarget.y - stMe.y;
 	dz = stTarget.z - 50 - stMe.z;
 
-	FLOAT fDistance = sqrt(dx*dx + dy*dy);
+	FLOAT fDistance = sqrt(dx * dx + dy * dy);
 
 	levelAngle = stMe.zy;
 	elevation = stMe.sx;
 	//角度补偿  -180 180 =》0 360
-	if (levelAngle<0)
+	if (levelAngle < 0)
 	{
 		levelAngle = levelAngle + 360;
 	}
@@ -48,7 +48,7 @@ VOID ShowPaint(stPlayerInfo stMe, stPlayerInfo stTarget, HDC hDc, DWORD dwWindwM
 		{
 			fPlayerAngle_xy = 0.0;
 		}
-		else if (dy>0)
+		else if (dy > 0)
 		{
 			fPlayerAngle_xy = asin(dy / fDistance) * 180 / 3.1416;
 		}
@@ -75,7 +75,7 @@ VOID ShowPaint(stPlayerInfo stMe, stPlayerInfo stTarget, HDC hDc, DWORD dwWindwM
 		{
 			fPlayerAngle_xy = 180.0;
 		}
-		else if (dy>0)
+		else if (dy > 0)
 		{
 			fPlayerAngle_xy = 180.0 - asin(dy / (fDistance)) * 180 / 3.1416;
 		}
@@ -101,10 +101,10 @@ VOID ShowPaint(stPlayerInfo stMe, stPlayerInfo stTarget, HDC hDc, DWORD dwWindwM
 	}
 
 	//视角俯仰夹角
-	fPlayerAngle_z = asin(dz / (sqrt(dx*dx + dy*dy + dz*dz))) * 180 / 3.1416;
+	fPlayerAngle_z = asin(dz / (sqrt(dx * dx + dy * dy + dz * dz))) * 180 / 3.1416;
 	fPaintAngle_z = elevation - fPlayerAngle_z;
 
-	if (fPaintAngle_xy > -45 && fPaintAngle_xy < 45 && fPaintAngle_z>-45 && fPaintAngle_z<45)
+	if (fPaintAngle_xy > -45 && fPaintAngle_xy < 45 && fPaintAngle_z > -45 && fPaintAngle_z < 45)
 	{
 		DWORD dwLift_x;
 		DWORD dwLeft_y;
@@ -112,14 +112,14 @@ VOID ShowPaint(stPlayerInfo stMe, stPlayerInfo stTarget, HDC hDc, DWORD dwWindwM
 		DWORD dwRight_y;
 		//屏幕坐标转换
 		//FLOAT fPaintPoint = 640 * (sin(fPaintAngle_xy)*fDistance / cos(fPaintAngle_xy)*fDistance);
-		FLOAT fPaintPoint = dwWindwMetricsX* (tan(fPaintAngle_xy*3.14 / 180) + 1) / 2;
+		FLOAT fPaintPoint = dwWindwMetricsX * (tan(fPaintAngle_xy * 3.14 / 180) + 1) / 2;
 		DWORD dwWight = 100 * 100 / (100 + fDistance) + 10;
 
 		dwLift_x = fPaintPoint - dwWight / 2;
 		dwRight_x = fPaintPoint + dwWight / 2;
 
 		//俯仰
-		FLOAT fPaintSx = dwWindwMetricsY*(tan(53.0*3.14 / 180)*tan(fPaintAngle_z*3.14 / 180) * 10 / 11 + 1) / 2;
+		FLOAT fPaintSx = dwWindwMetricsY * (tan(53.0 * 3.14 / 180) * tan(fPaintAngle_z * 3.14 / 180) * 10 / 11 + 1) / 2;
 
 		//DWORD dwHight = 100 * 512 / (100 + fDistance);
 		DWORD dwHight = 100 * 300 / (fDistance);
@@ -127,7 +127,7 @@ VOID ShowPaint(stPlayerInfo stMe, stPlayerInfo stTarget, HDC hDc, DWORD dwWindwM
 		dwLeft_y = fPaintSx + dwHight * ((fPaintAngle_z) / 100);
 		dwRight_y = fPaintSx - dwHight * (1 - (fPaintAngle_z) / 100);
 
-		WCHAR wBuffer[20] = { 0 };
+		WCHAR wBuffer[20] = {0};
 		memset(wBuffer, 0, 40);
 		swprintf_s(wBuffer, L"HP:%03d", stTarget.dwHp);
 		//显示血量
@@ -147,50 +147,49 @@ VOID ShowPaint(stPlayerInfo stMe, stPlayerInfo stTarget, HDC hDc, DWORD dwWindwM
 		Rectangle(hDc, dwLift_x, dwLeft_y, dwRight_x, dwRight_y);
 		DeleteObject(hPen);
 
-		//显示血条-血条颜色设置
-		if (stTarget.dwState == 50)
-		{
-			SetTextColor(hDc, RGB(105, 105, 105));
-			hPen = CreatePen(PS_SOLID, 1, RGB(105, 105, 105));
-			hBrush = (HBRUSH)CreateSolidBrush(RGB(105, 105, 105));
-		}
-		else if (stTarget.dwHp >= 80)
-		{
-			SetTextColor(hDc, RGB(0, 255, 0));
-			hPen = CreatePen(PS_SOLID, 1, RGB(0, 255, 0));
-			hBrush = (HBRUSH)CreateSolidBrush(RGB(0, 255, 0));
-		}
-		else if (stTarget.dwHp >= 60)
-		{
-			SetTextColor(hDc, RGB(255, 255, 0));
-			hPen = CreatePen(PS_SOLID, 1, RGB(255, 255, 0));
-			hBrush = (HBRUSH)CreateSolidBrush(RGB(255, 255, 0));
-		}
-		else if (stTarget.dwHp >= 40)
-		{
-			SetTextColor(hDc, RGB(255, 97, 0));
-			hPen = CreatePen(PS_SOLID, 1, RGB(255, 97, 0));
-			hBrush = (HBRUSH)CreateSolidBrush(RGB(255, 97, 0));
-		}
-		else
-		{
-			SetTextColor(hDc, RGB(255, 0, 0));
-			hPen = CreatePen(PS_SOLID, 1, RGB(255, 0, 0));
-			hBrush = (HBRUSH)CreateSolidBrush(RGB(255, 0, 0));
-		}
-		TextOutW(hDc, dwRight_x, dwRight_y, wBuffer, 6);
+		// //显示血条-血条颜色设置
+		// if (stTarget.dwState == 50)
+		// {
+		// 	SetTextColor(hDc, RGB(105, 105, 105));
+		// 	hPen = CreatePen(PS_SOLID, 1, RGB(105, 105, 105));
+		// 	hBrush = (HBRUSH)CreateSolidBrush(RGB(105, 105, 105));
+		// }
+		// else if (stTarget.dwHp >= 80)
+		// {
+		// 	SetTextColor(hDc, RGB(0, 255, 0));
+		// 	hPen = CreatePen(PS_SOLID, 1, RGB(0, 255, 0));
+		// 	hBrush = (HBRUSH)CreateSolidBrush(RGB(0, 255, 0));
+		// }
+		// else if (stTarget.dwHp >= 60)
+		// {
+		// 	SetTextColor(hDc, RGB(255, 255, 0));
+		// 	hPen = CreatePen(PS_SOLID, 1, RGB(255, 255, 0));
+		// 	hBrush = (HBRUSH)CreateSolidBrush(RGB(255, 255, 0));
+		// }
+		// else if (stTarget.dwHp >= 40)
+		// {
+		// 	SetTextColor(hDc, RGB(255, 97, 0));
+		// 	hPen = CreatePen(PS_SOLID, 1, RGB(255, 97, 0));
+		// 	hBrush = (HBRUSH)CreateSolidBrush(RGB(255, 97, 0));
+		// }
+		// else
+		// {
+		// 	SetTextColor(hDc, RGB(255, 0, 0));
+		// 	hPen = CreatePen(PS_SOLID, 1, RGB(255, 0, 0));
+		// 	hBrush = (HBRUSH)CreateSolidBrush(RGB(255, 0, 0));
+		// }
+		// TextOutW(hDc, dwRight_x, dwRight_y, wBuffer, 6);
 
-		SelectObject(hDc, hPen);
-		Rectangle(hDc, dwLift_x, dwRight_y + 6, dwRight_x, dwRight_y);
-		DeleteObject(hPen);
+		// SelectObject(hDc, hPen);
+		// Rectangle(hDc, dwLift_x, dwRight_y + 6, dwRight_x, dwRight_y);
+		// DeleteObject(hPen);
 
-		HBRUSH hOldBrush = (HBRUSH)SelectObject(hDc, hBrush);
+		// HBRUSH hOldBrush = (HBRUSH)SelectObject(hDc, hBrush);
 
-		Rectangle(hDc, dwLift_x, dwRight_y + 6, dwLift_x + (dwRight_x - dwLift_x)*stTarget.dwHp / 100, dwRight_y);
-		SelectObject(hDc, hOldBrush);
-		DeleteObject(hOldBrush);
-		DeleteObject(hBrush);
-		//Rectangle(hDc, 0, 0, dwWindwMetricsX, dwWindwMetricsY);
+		// Rectangle(hDc, dwLift_x, dwRight_y + 6, dwLift_x + (dwRight_x - dwLift_x) * stTarget.dwHp / 100, dwRight_y);
+		// SelectObject(hDc, hOldBrush);
+		// DeleteObject(hOldBrush);
+		// DeleteObject(hBrush);
+		// //Rectangle(hDc, 0, 0, dwWindwMetricsX, dwWindwMetricsY);
 	}
-
 }
