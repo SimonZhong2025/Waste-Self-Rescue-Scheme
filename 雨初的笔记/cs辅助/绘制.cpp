@@ -42,7 +42,9 @@ VOID CreateCoverWindow()
 
 
 	//分层窗口透明度和颜色	筛选
-	SetLayeredWindowAttributes(g_hWnd, RGB(255,255,255), 0, LWA_COLORKEY);
+	// SetLayeredWindowAttributes(g_hWnd, RGB(255,255,255), 0, LWA_COLORKEY);
+	SetLayeredWindowAttributes(g_hWnd, 0, 255, LWA_ALPHA);
+
 	ShowWindow(g_hWnd, SW_SHOW);
 
 	//完全置顶
