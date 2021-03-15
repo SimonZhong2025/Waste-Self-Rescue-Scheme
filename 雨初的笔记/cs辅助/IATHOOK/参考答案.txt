@@ -1,0 +1,15 @@
+/************************************
+**	×°ÔØOpenProcess¹³×Ó
+**
+************************************/
+typedef HANDLE(WINAPI *MyOpenProcess)(DWORD dwDesiredAccess, BOOL bInheritHandle, DWORD dwProcessId);
+MyOpenProcess pOpenProcess;
+
+VOID SetOpenProcessHook()
+{
+	SetApiHook((DWORD)GetProcAddress(LoadLibraryA("Kernel32.dll"), "OpenProcess"), (DWORD)MyOpenProcessAPI, (PDWORD)&pOpenProcess);
+}
+VOID UnSetOpenProcessHook()
+{
+	SetApiHook((DWORD)GetProcAddress(LoadLibraryA("Kernel32.dll"), "OpenProcess"), (DWORD)pOpenProcess, (PDWORD)&pOpenProcess);
+}
