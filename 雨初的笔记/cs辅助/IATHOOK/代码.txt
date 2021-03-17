@@ -1,0 +1,44 @@
+/************************************
+**	IAT_HOOK功能函数
+**	DWORD	pFunAddre	：目标API函数地址
+**	DWORD	pMyAddre	：替换的HOOK函数地址
+**	PDWORD	pOldAddre	：返回的原来的IAT地址
+************************************/
+DWORD  SetApiHook(DWORD pFunAddre, DWORD pMyAddre,PDWORD pOldAddre)
+{
+	DWORD dwLastSet = 0;
+	PIMAGE_DOS_HEADER pDos = NULL;
+	PIMAGE_NT_HEADERS32 pNT = NULL;
+	PIMAGE_IMPORT_DESCRIPTOR pInport = NULL;
+	PDWORD pIAT = NULL;
+	//获得模块基址
+	HMODULE hModBaseAdd = GetModuleHandleA(NULL);
+
+	//找到目标导入表
+	pDos = (PIMAGE_DOS_HEADER)hModBaseAdd;
+	pNT = (PIMAGE_NT_HEADERS32)((PCHAR)pDos + pDos->e_lfanew);
+	pInport = (PIMAGE_IMPORT_DESCRIPTOR)((DWORD)hModBaseAdd + (DWORD)pNT->OptionalHeader.DataDirectory[1].VirtualAddress);
+
+	//遍历IAT
+	while (pInport->FirstThunk != 0)
+	{
+		pIAT = (PDWORD)((DWORD)hModBaseAdd + (DWORD)pInport->FirstThunk);
+
+		while (*pIAT != 0)
+		{
+			if (*pIAT == (DWORD)pFunAddre)
+			{
+				//开始HOOK
+				VirtualProtect(pIAT, sizeof(PDWORD), PAGE_READWRITE, &dwLastSet);
+				*pOldAddre = (DWORD)*pIAT;
+				*pIAT = (DWORD)pMyAddre;
+				//结束HOOK
+				VirtualProtect(pIAT, sizeof(PDWORD), dwLastSet, NULL);
+				return 0;
+			}
+			pIAT += 1;
+		}
+		pInport += 1;
+	}
+	return 0;
+}
