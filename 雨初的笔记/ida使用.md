@@ -70,4 +70,5 @@
 
   ![image-20210204133525746](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20210204133525746.png)
 
-+ 
++ `alt + b` 可以打开二进制搜索界面。
+
