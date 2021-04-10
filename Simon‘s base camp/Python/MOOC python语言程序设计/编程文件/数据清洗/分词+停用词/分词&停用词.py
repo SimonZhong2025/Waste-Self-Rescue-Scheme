@@ -30,7 +30,7 @@ def seg_depart(sentence):
     return outstr
 
 # 给出文档路径
-filename = "Init.txt"
+filename = "start.csv"
 outfilename = "out.txt"
 inputs = open(filename, 'r', encoding='UTF-8')
 outputs = open(outfilename, 'w', encoding='UTF-8')
