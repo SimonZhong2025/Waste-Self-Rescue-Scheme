@@ -83,6 +83,6 @@
   }
   ```
 
-  ![image-20201022102517088](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20201022102517088.png)
+  ![image-20201022102517088](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20201022102517088.png)
 
   做不出来，看汇编代码的能力还是要加强。

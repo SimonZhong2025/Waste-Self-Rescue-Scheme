@@ -1,8 +1,8 @@
 参考 https://blog.csdn.net/Kwansy/article/details/108890586
 
-+ ![image-20201128141100829](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20201128141100829.png)
-+ ![image-20201128141117844](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20201128141117844.png)
-+ ![image-20201127155603527](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20201127155603527.png)
++ ![image-20201128141100829](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20201128141100829.png)
++ ![image-20201128141117844](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20201128141117844.png)
++ ![image-20201127155603527](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20201127155603527.png)
 + TSS是一块104个字节的内存， **其不在CPU里面，不是一个寄存器** 。
 + TSS存在的价值仅仅是允许我们一次性替换掉一堆寄存器
 + `bush flag`  如果是 `1` （B）说明这个段描述符已经被加载到 `tr` 寄存器里面。如果是 `0` （9）说明这个段描述符还没有被加载到 `tr` 寄存器里面。即如果加载到 `tr` 寄存器里面，则其会从 `9` 变成 `B` 。
@@ -14,13 +14,13 @@
 
 + 可以通过 `dt nt!_KTSS` 来查看这个结构体
 
-  ![image-20201127161322418](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20201127161322418.png)
+  ![image-20201127161322418](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20201127161322418.png)
 
 
 
 ### 使用JMP FAR来使用TSS
 
-+ ![image-20201128144750382](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20201128144750382.png)
++ ![image-20201128144750382](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20201128144750382.png)
 
 + ```cpp
   printf("请在windbg执行: eq 8003f048 %02x00e9%02x`%04x0068\n", ((DWORD)TSS>>24) & 0x000000FF,((DWORD)TSS>>16) & 0x000000FF, (WORD)TSS);
@@ -162,7 +162,7 @@
   ```
 
 + `int 3` 会修改 `fs` ，要事先将 `fs` 存下来
-+ ![image-20201128150423705](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20201128150423705.png)
++ ![image-20201128150423705](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20201128150423705.png)
 
 
 

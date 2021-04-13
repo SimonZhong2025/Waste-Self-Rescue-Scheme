@@ -1,6 +1,6 @@
 + 这道题构造的 `payload` 打出之后栈里面应该是这样的
 
-  ![image-20201020173326671](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20201020173326671.png)
+  ![image-20201020173326671](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20201020173326671.png)
 
 + 代码如下
 

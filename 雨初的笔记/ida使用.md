@@ -68,7 +68,7 @@
 
 + 结构体试图， `edit` ，添加结构体，可以添加 `standard structure` 。
 
-  ![image-20210204133525746](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20210204133525746.png)
+  ![image-20210204133525746](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20210204133525746.png)
 
 + `alt + b` 可以打开二进制搜索界面。
 

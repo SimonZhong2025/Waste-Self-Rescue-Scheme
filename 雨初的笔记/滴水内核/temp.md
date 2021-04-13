@@ -1,4 +1,4 @@
-![image-20201206142643766](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20201206142643766.png)
+![image-20201206142643766](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20201206142643766.png)
 
 
 

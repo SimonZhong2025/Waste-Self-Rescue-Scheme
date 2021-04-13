@@ -10,17 +10,17 @@
 
   `vad` 树里面的记录的单位是4KB。
 
-  ![image-20210120152330473](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20210120152330473.png)
+  ![image-20210120152330473](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20210120152330473.png)
 
 + 他这里的思路是先构造一个中断门，然后把 `MessageBox` 前4位patch为 `int XX` ，这样可以直接进到中断，然后就可以记录调用
 
-  ![image-20210120164225356](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20210120164225356.png)
+  ![image-20210120164225356](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20210120164225356.png)
   
 + 不能对一个 `PVOID` 解引用，要转为 `PULONG` 再解引用。
 
 + `C030000` 就是PDE的地址
 
-+ ![image-20210123122320471](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20210123122320471.png)
++ ![image-20210123122320471](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20210123122320471.png)
 
   最后一个参数最先入栈
   
@@ -42,7 +42,7 @@
   | 比较 | RtlCompareString             | RtlCompareUnicoodeString     |
   | 转换 | RtlAnsiStringToUnicodeString | RtlUnicodeStringToAnsiString |
   
-+ ![image-20210124144847976](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20210124144847976.png)
++ ![image-20210124144847976](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20210124144847976.png)
 
 
 
@@ -50,7 +50,7 @@
 
 + 另外申请一个线性地址，映射到MessageBoxA的物理页，设置PTE的R/W属性，使其可读写。
 
-+ ![image-20210120163433543](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20210120163433543.png)
++ ![image-20210120163433543](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20210120163433543.png)
 
 + [ ] 先写一个inlinehook `messagebox` 的demo
 

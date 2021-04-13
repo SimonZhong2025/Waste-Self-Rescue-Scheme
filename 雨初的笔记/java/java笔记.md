@@ -22,7 +22,7 @@
 
 + `instanceof`实际上判断一个变量所指向的实例是否是指定类型，或者这个类型的子类。如果一个引用变量为`null`，那么对任何`instanceof`的判断都为`false`。
 
-+ ![image-20201028094659829](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20201028094659829.png).
++ ![image-20201028094659829](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20201028094659829.png).
 
 + 加上`@Override`可以让编译器帮助检查是否进行了正确的覆写。希望进行覆写，但是不小心写错了方法签名，编译器会报错。
 
@@ -47,17 +47,17 @@
 
 ### 字符串
 
-![image-20201030152728286](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20201030152728286.png)
+![image-20201030152728286](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20201030152728286.png)
 
 + `.substring` 方法左闭右开
 
-+ ![image-20201030153049630](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20201030153049630.png)
++ ![image-20201030153049630](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20201030153049630.png)
 
   比较值而不是比较这两个字符串指向是否是一个地址。
 
 + `StringBuilder` 是可以写的。但不支持多线程。 `StringBuffer` 则可以支持多线程。
 
-+ ![image-20201030154543275](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20201030154543275.png)
++ ![image-20201030154543275](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20201030154543275.png)
 
 + `StringBuffer` 只能用 `append` 往后加数据。
 
@@ -65,7 +65,7 @@
 
 ### 面向对象
 
-![image-20201030192004773](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20201030192004773.png)
+![image-20201030192004773](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20201030192004773.png)
 
 + 在类里面可以赋初始值
 
@@ -73,7 +73,7 @@
 
 + JAVA中也有类似C++析构函数的功能
 
-  ![image-20201030193130768](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20201030193130768.png)
+  ![image-20201030193130768](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20201030193130768.png)
 
 + ![image-20201030193111288](C:\Users\雨初\AppData\Roaming\Typora\typora-user-images\image-20201030193111288.png)
 

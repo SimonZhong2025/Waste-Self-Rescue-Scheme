@@ -7,7 +7,7 @@
   >1. “I x”向集合中插入一个字符串x；
   >2. “Q x”询问一个字符串在集合中出现了多少次。
   >
-  >共有N个操作，输入的字符串总长度不超过 ![image-20201227225932982](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20201227225932982.png)，字符串仅包含小写英文字母。
+  >共有N个操作，输入的字符串总长度不超过 ![image-20201227225932982](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20201227225932982.png)，字符串仅包含小写英文字母。
   >
   >#### 输入格式
   >
@@ -23,9 +23,9 @@
   >
   >#### 数据范围
   >
-  >![image-20201227225924075](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20201227225924075.png)
+  >![image-20201227225924075](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20201227225924075.png)
   >
-  >![image-20201227230033970](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20201227230033970.png)
+  >![image-20201227230033970](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20201227230033970.png)
 
 + `trie` 树用来快速存储字符串集合
 + 高效查找某个字符串是否出现过以及出现多少次
@@ -34,7 +34,7 @@
 
 + `trie` 树的根节点是一个空结点，所以存储的时候要使用 `++ idx` 而不是 `idx ++ ` 
 
-  ![image-20201111090407477](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20201111090407477.png)
+  ![image-20201111090407477](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20201111090407477.png)
 
 + 因为一个字符串的末尾是 `\0` ，所以可以这样遍历字符串
 
@@ -128,19 +128,19 @@
   >
   >#### 数据范围
   >
-  >![image-20201227230122398](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20201227230122398.png)
+  >![image-20201227230122398](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20201227230122398.png)
   >
-  >![image-20201227230129544](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20201227230129544.png)
+  >![image-20201227230129544](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20201227230129544.png)
 
-![image-20201227103915196](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20201227103915196.png)
+![image-20201227103915196](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20201227103915196.png)
 
 + `next[i] = j` 的含义是模式字符串中 `p[1, j]` 和 `p[i - j + 1, i]` 是相等的。也就是 **第一个字符到第j的字符** 组成的字符串和 **第i - j + 1到第i的字符是相等的** 。
 
 + `next` 在某个头文件里面有，所以在写代码的时候起名为 `ne` 才能万无一失。
 
-  ![image-20201029190320145](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20201029190320145.png)
+  ![image-20201029190320145](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20201029190320145.png)
 
-  ![image-20201227103703695](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20201227103703695.png)
+  ![image-20201227103703695](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20201227103703695.png)
 
 + `while (j && s[i] != p[j + 1]) j = ne[j];` 直到匹配或者退无可退为止
 
@@ -186,13 +186,13 @@
 
 
 
-+ ![image-20201228080016598](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20201228080016598.png)
++ ![image-20201228080016598](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20201228080016598.png)
 
   做的过程中要用到的工具、过程等
 
 + 译后编辑
 
-  ![image-20201228080149025](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20201228080149025.png)
+  ![image-20201228080149025](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20201228080149025.png)
 
   ```
   ①______________()
@@ -202,6 +202,6 @@
 
 + 英翻中
 
-  ![image-20201228080511861](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20201228080511861.png)
+  ![image-20201228080511861](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20201228080511861.png)
 
   考试结束前20分钟会收到机器翻译的译文。

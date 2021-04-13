@@ -1,64 +1,64 @@
-+ ![](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20210110131043288.png)
++ ![](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20210110131043288.png)
 
-+ ![image-20210110131321378](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20210110131321378.png)
++ ![image-20210110131321378](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20210110131321378.png)
 
 + **transmate** 是国产的
 
-  ![ ](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20210110131355733.png)
+  ![ ](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20210110131355733.png)
 
 + core of translation technology是什么？
 
-  ![image-20210110150730101](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20210110150730101.png)
+  ![image-20210110150730101](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20210110150730101.png)
 
-+ ![image-20210110132137967](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20210110132137967.png)
++ ![image-20210110132137967](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20210110132137967.png)
 
 + 这又应该选什么？
 
-  ![image-20210110132252326](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20210110132252326.png)
+  ![image-20210110132252326](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20210110132252326.png)
 
-+ ![image-20210110150600843](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20210110150600843.png)
++ ![image-20210110150600843](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20210110150600843.png)
 
-+ ![image-20210110150624571](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20210110150624571.png)
++ ![image-20210110150624571](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20210110150624571.png)
 
-+ ![image-20210110150710258](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20210110150710258.png)
++ ![image-20210110150710258](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20210110150710258.png)
 
-+ ![image-20210110150827278](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20210110150827278.png)
++ ![image-20210110150827278](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20210110150827278.png)
 
 + **methodology** == **方法学,方法论，一套方法**
 
-+ ![image-20210110151434676](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20210110151434676.png)
++ ![image-20210110151434676](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20210110151434676.png)
 
-+ ![image-20210110151658170](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20210110151658170.png)
++ ![image-20210110151658170](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20210110151658170.png)
 
 
 
 ### 网课
 
-+ ![image-20210110134901284](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20210110134901284.png)
++ ![image-20210110134901284](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20210110134901284.png)
 
-+ ![image-20210110135118485](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20210110135118485.png)
++ ![image-20210110135118485](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20210110135118485.png)
 
-+ **bilingual corpora** 才是对翻译有价值的语料库![image-20210110135917111](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20210110135917111.png)
++ **bilingual corpora** 才是对翻译有价值的语料库![image-20210110135917111](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20210110135917111.png)
 
 + 非译元素是蓝色的，有匹配的术语是粉色的，标识符是紫色的。
 
-+ ![image-20210110140311010](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20210110140311010.png)
++ ![image-20210110140311010](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20210110140311010.png)
 
-+ ![image-20210110140511391](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20210110140511391.png)
++ ![image-20210110140511391](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20210110140511391.png)
 
-+ ![image-20210110140904613](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20210110140904613.png)
++ ![image-20210110140904613](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20210110140904613.png)
 
-+ ![image-20210110141304600](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20210110141304600.png)
++ ![image-20210110141304600](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20210110141304600.png)
 
-+ ![image-20210110141533124](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20210110141533124.png)
++ ![image-20210110141533124](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20210110141533124.png)
 
   句珠对是要进行避免的。
 
 + **上下文匹配**是最精准的
 
-  ![image-20210110141948056](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20210110141948056.png)
+  ![image-20210110141948056](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20210110141948056.png)
 
-+ ![image-20210110142143566](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20210110142143566.png)
++ ![image-20210110142143566](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20210110142143566.png)
 
 +  
 

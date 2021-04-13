@@ -2,7 +2,7 @@
 
 + 另外应该是 `b'A' * 112` 而不是乘108是因为比如在这里你想覆盖掉 `EBP` 的值
 
-  ![image-20201018182358917](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20201018182358917.png)
+  ![image-20201018182358917](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20201018182358917.png)
 
   那么只写入 `0xd184 - 0xd188 == 4` 即4个字节的数据是不够的，这只能覆盖掉当前的值， `0xfffd188` 那里的 `EBP` 并没有被覆盖到。所以需要 `0xd184 - 0xd188 + 4` 个字节的数据才能覆盖我们想要覆盖的东西。
 
