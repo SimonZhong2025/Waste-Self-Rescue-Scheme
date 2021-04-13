@@ -1,5 +1,5 @@
-+ ![image-20201121192700640](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20201121192700640.png)
-+ ![image-20201126165632681](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20201126165632681.png)
++ ![image-20201121192700640](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20201121192700640.png)
++ ![image-20201126165632681](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20201126165632681.png)
 
 
 
@@ -40,7 +40,7 @@
 
 + 编译一下然后 `F5` 找到中断门函数入口点为 `0x401040`
 
-  ![image-20201126170545832](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20201126170545832.png)
+  ![image-20201126170545832](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20201126170545832.png)
 
 + 构造一个中断门，下标为0x20，用 `int 0x20` 调用。这个中断门DPL为3，因为中断门中DPL要和CPL（应该是CPL吧）相等。
 
@@ -54,7 +54,7 @@
 
 
 
-+ ![image-20201126170338074](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20201126170338074.png)
++ ![image-20201126170338074](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20201126170338074.png)
 
 ```cpp
 #include <windows.h>

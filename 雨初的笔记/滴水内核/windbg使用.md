@@ -4,6 +4,6 @@
 
 + 如果想要看某个进程低2G的地址，要先 `.process 进程ID` 。
 
-  ![image-20210128173531521](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20210128173531521.png)
+  ![image-20210128173531521](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20210128173531521.png)
 
 + 

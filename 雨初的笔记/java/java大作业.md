@@ -168,13 +168,13 @@
 
 + 对于选择的下拉列表
 
-  ![image-20201212195214415](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20201212195214415.png)
+  ![image-20201212195214415](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20201212195214415.png)
 
-+ ![image-20201212201625396](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20201212201625396.png)
++ ![image-20201212201625396](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20201212201625396.png)
 
-+ ![image-20201213113609285](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20201213113609285.png)
++ ![image-20201213113609285](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20201213113609285.png)
 
-+ ![image-20201213161551577](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20201213161551577.png)
++ ![image-20201213161551577](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20201213161551577.png)
 
 + 当Java程序启动的时候，实际上是启动了一个JVM进程，然后，JVM启动主线程来执行`main()`方法。在`main()`方法中，我们又可以启动其他线程。
 
@@ -184,7 +184,7 @@
 
 + `volatile` 使用
 
-  ![image-20201215115655994](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20201215115655994.png)
+  ![image-20201215115655994](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20201215115655994.png)
 
 + 如何创建守护线程呢？方法和普通线程一样，只是在调用`start()`方法前，调用`setDaemon(true)`把该线程标记为守护线程：
 
@@ -206,7 +206,7 @@
 
 + `draw` 要如果想要填充整个区域要缩小一个像素
 
-  ![image-20201216193245176](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20201216193245176.png)
+  ![image-20201216193245176](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20201216193245176.png)
 
   要改为 `g.drawRect(0, 0, width - 1, height - 1)` 。
 
@@ -256,11 +256,11 @@
 
 ### 亮点
 
-![image-20201212192609186](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20201212192609186.png)
+![image-20201212192609186](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20201212192609186.png)
 
 + 用到了 `try-catch`
 
-  ![image-20201216090819465](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20201216090819465.png)
+  ![image-20201216090819465](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20201216090819465.png)
   
 + ```
   this.setLocationRelativeTo(null);
@@ -272,19 +272,19 @@
 
 ### 踩到的坑
 
-![image-20201213101723683](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20201213101723683.png)
+![image-20201213101723683](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20201213101723683.png)
 
 + 死循环了
 
 + 级联删除
 
-+ ![image-20201213213100556](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20201213213100556.png)
++ ![image-20201213213100556](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20201213213100556.png)
 
   `vector` 不能用下标访问 
   
 + `setkeylistener` 后还要给 `panel` 加上 `requestFocus`
 
-+ ![image-20201217151820711](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20201217151820711.png)
++ ![image-20201217151820711](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20201217151820711.png)
 
   https://stackoverflow.com/questions/58604291/java-awt-queue-cannot-be-accessed-from-outside-package
 
@@ -292,7 +292,7 @@
 
 ### 看源码问题
 
-![image-20201216181616428](https://cdn.jsdelivr.net/gh/smallzhong/picgo-pic-bed/image-20201216181616428.png)
+![image-20201216181616428](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20201216181616428.png)
 
 + 使用 `MouseMotionListener` 来达到拖动鼠标画一块区域的效果
 
