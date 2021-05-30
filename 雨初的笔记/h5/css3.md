@@ -72,4 +72,4 @@
 + ![image-20210527094702890](C:\Users\雨初\AppData\Roaming\Typora\typora-user-images\image-20210527094702890.png)
 + ![image-20210527095225427](C:\Users\雨初\AppData\Roaming\Typora\typora-user-images\image-20210527095225427.png)
 + ![image-20210527102415955](C:\Users\雨初\AppData\Roaming\Typora\typora-user-images\image-20210527102415955.png)
-+ 
++ 学3d离不开透视和 `preserve-3d` 。
