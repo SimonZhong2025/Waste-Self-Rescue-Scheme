@@ -69,7 +69,13 @@
   透视是写在被观察元素的父盒子上的。而 `translateZ` 是写在被透视元素上面的。 `perspective` 本质上是指定当前观察者所处的位置，而 `translateZ` 是指定被观察的元素的位置。
 
 + ![image-20210527094554379](C:\Users\雨初\AppData\Roaming\Typora\typora-user-images\image-20210527094554379.png)
+
 + ![image-20210527094702890](C:\Users\雨初\AppData\Roaming\Typora\typora-user-images\image-20210527094702890.png)
+
 + ![image-20210527095225427](C:\Users\雨初\AppData\Roaming\Typora\typora-user-images\image-20210527095225427.png)
+
 + ![image-20210527102415955](C:\Users\雨初\AppData\Roaming\Typora\typora-user-images\image-20210527102415955.png)
-+ 学3d离不开透视和 `preserve-3d` 。
+
++ 学3d离不开透视和 `transform-style: preserve-3d` 。
+
++ 拥有较高 `z-index` 的元素会比 `z-index` 较低的元素排在更前面的位置。
