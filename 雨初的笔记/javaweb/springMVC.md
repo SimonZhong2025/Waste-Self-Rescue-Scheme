@@ -39,3 +39,7 @@
   ![image-20210601111031604](https://cdn.jsdelivr.net/gh/smallzhong/new-picgo-pic-bed@master//image-20210601111031604.png)
 
   这样使用
+
++ 如果仅仅只是想跳转到一个页面，不需要传递参数，那么没必要使用 `ModelAndView` ，直接返回一个字符串就可以。
+
++ 在处理 `ajax` 的时候可以使用 `void` 返回值。
