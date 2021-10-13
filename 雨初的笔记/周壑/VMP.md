@@ -24,9 +24,7 @@
 
 + ![image-20211013134210003](https://cdn.jsdelivr.net/gh/smallzhong/new_new_picgo_picbed@main/image-20211013134210003.png)
 
+  ![image-20211013134041556](https://cdn.jsdelivr.net/gh/smallzhong/new_new_picgo_picbed@main/image-20211013134041556.png)
+  
   首先关掉增量链接和优化
-  
-  ![image-20211013134041556](https://raw.githubusercontent.com/smallzhong/new_new_picgo_picbed/main/image-20211013134041556.png)
-  
-  
 
