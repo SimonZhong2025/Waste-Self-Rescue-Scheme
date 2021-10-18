@@ -27,4 +27,12 @@
   ![image-20211013134041556](https://cdn.jsdelivr.net/gh/smallzhong/new_new_picgo_picbed@main/image-20211013134041556.png)
   
   首先关掉增量链接和优化
+  
+  ![image-20211013140243440](https://cdn.jsdelivr.net/gh/smallzhong/new_new_picgo_picbed@main/image-20211013140243440.png)
+  
+  关闭ASLR
+  
++ ![image-20211013160349868](https://cdn.jsdelivr.net/gh/smallzhong/new_new_picgo_picbed@main/image-20211013160349868.png)
+
+  ![image-20211013160416162](https://cdn.jsdelivr.net/gh/smallzhong/new_new_picgo_picbed@main/image-20211013160416162.png)
 
