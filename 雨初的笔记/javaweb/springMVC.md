@@ -32,7 +32,7 @@
 
 + 对于字符编码设置的过滤器
 
-  ![image-20210601104108272](C:\Users\雨初\AppData\Roaming\Typora\typora-user-images\image-20210601104108272.png)
+  ![image-20210601104108272](C:\Users\22112\AppData\Roaming\Typora\typora-user-images\old_images\image-20210601104108272.png)
 
 + `@RequestParam` 这个注解可以解决请求中参数名和形参参数名不一致的问题。 `value` 表示请求中的参数名称，位置在处理器方法的形参定义的前面。 `require` 可以确定这个参数是否存在。如果是 `false` 的话这个参数可以有也可以没有，为 `true` 的话这个参数必须存在。
 

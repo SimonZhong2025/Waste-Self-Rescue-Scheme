@@ -75,15 +75,15 @@
 
   ![image-20201030193130768](https://raw.githubusercontent.com/smallzhong/picgo-pic-bed/master/image-20201030193130768.png)
 
-+ ![image-20201030193111288](C:\Users\雨初\AppData\Roaming\Typora\typora-user-images\image-20201030193111288.png)
++ ![image-20201030193111288](C:\Users\22112\AppData\Roaming\Typora\typora-user-images\old_images\image-20201030193111288.png)
 
 + 在java中生成对象必须是用 `new` 。
 
-  ![image-20201030200604204](C:\Users\雨初\AppData\Roaming\Typora\typora-user-images\image-20201030200604204.png)
+  ![image-20201030200604204](C:\Users\22112\AppData\Roaming\Typora\typora-user-images\old_images\image-20201030200604204.png)
 
   这样是不行的。
   
-+ ![image-20201030201441666](C:\Users\雨初\AppData\Roaming\Typora\typora-user-images\image-20201030201441666.png)
++ ![image-20201030201441666](C:\Users\22112\AppData\Roaming\Typora\typora-user-images\old_images\image-20201030201441666.png)
 
 + 内部类不能有静态成员。
 
@@ -97,5 +97,5 @@
 
 + 接口中默认的访问控制符都是**public**
 
-![image-20201030210459792](C:\Users\雨初\AppData\Roaming\Typora\typora-user-images\image-20201030210459792.png)
+![image-20201030210459792](C:\Users\22112\AppData\Roaming\Typora\typora-user-images\old_images\image-20201030210459792.png)
 

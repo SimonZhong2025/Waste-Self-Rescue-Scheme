@@ -14,6 +14,6 @@
 
 + 在windbg里面使用 `!pool 地址` 可以看这个地址的页面属性。
 
-+ ![image-20210502000646584](C:\Users\雨初\AppData\Roaming\Typora\typora-user-images\image-20210502000646584.png)
++ ![image-20210502000646584](C:\Users\22112\AppData\Roaming\Typora\typora-user-images\old_images\image-20210502000646584.png)
 
   `ba` 下硬件断点。
