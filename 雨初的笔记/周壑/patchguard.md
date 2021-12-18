@@ -52,4 +52,4 @@
 
 # patchguard3
 
-+ 
++ hook `rtlmovememory` 蓝屏来得比较快一点
